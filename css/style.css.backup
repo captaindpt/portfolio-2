@@ -1,0 +1,1138 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Perfectly Nineties';
+  src: url('../assets/fonts/perfectly-nineties-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+@font-face {
+  font-family: 'Polysans';
+  src: url('../assets/fonts/Polysans Font Family/polysanstrial-neutral.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+@font-face {
+  font-family: 'Polysans';
+  src: url('../assets/fonts/Polysans Font Family/polysanstrial-median.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+
+@font-face {
+  font-family: 'Polysans';
+  src: url('../assets/fonts/Polysans Font Family/polysanstrial-bulky.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+
+@font-face {
+  font-family: 'Martina Light';
+  src: url('../assets/fonts/TestMartinaPlantijn-Light-BF663c36d1dbbe7.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+@font-face {
+  font-family: 'Martina Bold';
+  src: url('../assets/fonts/TestMartinaPlantijn-Bold-BF663c36d1d4676.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+
+@font-face {
+  font-family: 'Perfectly Nineties Light';
+  src: url('../assets/fonts/perfectly-nineties-regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+:root {
+  /* Additional Design Tokens (base tokens now inlined in head) */
+  
+  /* Typography */
+  --font-family-light: "Martina Light", serif;
+  --font-family-bold: "Martina Bold", serif;
+  --font-family-body: "Polysans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-headers: "Perfectly Nineties Light", Georgia, "Times New Roman", serif;
+  --font-family-nav: "Martina Light", serif;
+  --font-size-base: 16px;
+  --font-size-large: 20px;
+  --font-size-nav: 18px;
+  --font-size-nav-mobile: 16px;
+  --font-size-heading: 40px;
+  --font-size-title: 24px;
+  --font-size-title-desktop: 30px;
+  --line-height-base: 1.6;
+  --line-height-text: 1.5;
+  --line-height-heading: 38px;
+  --letter-spacing-heading: -0.8px;
+  
+  /* Spacing */
+  --spacing-xs: 0.5em;
+  --spacing-sm: 1em;
+  --spacing-md: 1.5em;
+  --spacing-lg: 2em;
+  --spacing-xl: 2.5em;
+  --spacing-heading-top: 40px;
+  --spacing-text-top: 20px;
+  
+  /* Layout */
+  --layout-max-width: 672px; /* max-w-2xl like ampcode */
+  --layout-sidebar-width: 240px; /* Reduced from 280px */
+  --layout-header-height: 80px;
+  --layout-breakpoint: 900px;
+  
+  /* Content Area Control Variables */
+  --content-margin-top: 0.5rem; /* Control top margin */
+  --content-margin-horizontal: 1rem; /* Control left/right margins */
+  --content-margin-bottom: 0.5rem; /* Control bottom margin */
+  
+  /* Work Container Side Margins - Easy Experimentation */
+  --work-container-side-margin: 12.5vw; /* Current: 1/8 of viewport width each side */
+  
+  /* 
+  Quick Switch Options (replace the line above):
+  
+  Minimal margins:
+  --work-container-side-margin: 6.25vw;   // 1/16 of viewport 
+  
+  Current (1/8):
+  --work-container-side-margin: 12.5vw;   // 1/8 of viewport 
+  
+  Generous (1/4):
+  --work-container-side-margin: 25vw;     // 1/4 of viewport 
+  
+  Very generous (1/3):
+  --work-container-side-margin: 33.33vw;  // 1/3 of viewport 
+  
+  Fixed margins:
+  --work-container-side-margin: 3rem;     // Fixed 3rem
+  --work-container-side-margin: 5rem;     // Fixed 5rem
+  
+  No margins (full width):
+  --work-container-side-margin: 0;        // Edge to edge
+  */
+  
+  /* Work Section Size Ratios (adjust these to change section sizes) */
+  --work-section-1-ratio: 1.2fr; /* Professional Experience - slightly larger */
+  --work-section-2-ratio: 1.3fr; /* Side Projects - largest section */
+  --work-section-3-ratio: 0.7fr; /* Everything Else - smaller */
+  --work-divider-spacing: 0.8rem; /* Space between sections */
+  
+  /*
+  CUSTOMIZATION EXAMPLES:
+  
+  For minimal margins (edge-to-edge):
+  --content-margin-horizontal: 0.5rem;
+  --content-margin-top: 0.5rem;
+  --content-margin-bottom: 0.5rem;
+  
+  For more generous spacing:
+  --content-margin-horizontal: 4rem;
+  --content-margin-top: 2rem;
+  --content-margin-bottom: 2rem;
+  
+  To make Professional Experience larger:
+  --work-section-1-ratio: 1.5fr;
+  --work-section-2-ratio: 1fr;
+  --work-section-3-ratio: 0.8fr;
+  
+  To emphasize Side Projects:
+  --work-section-1-ratio: 0.8fr;
+  --work-section-2-ratio: 1.5fr;
+  --work-section-3-ratio: 0.7fr;
+  
+  To minimize Everything Else:
+  --work-section-1-ratio: 1.2fr;
+  --work-section-2-ratio: 1.2fr;
+  --work-section-3-ratio: 0.6fr;
+  */
+
+/* Font-face declarations moved to inlined critical CSS */
+
+body {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-primary);
+    overflow-x: hidden; /* Prevent horizontal scroll on the body */
+    
+    /* Smooth transitions for theme switching */
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+/* Remove old main rule targeting the tag directly */
+/* We now use .main-content */
+
+.main-content {
+    padding-top: var(--layout-header-height);
+    padding-left: 0; /* Remove side padding completely */
+    padding-right: 0; /* Remove side padding completely */
+    padding-bottom: var(--spacing-md);
+
+/* Center the article content within .main-content */
+.main-content article {
+     max-width: var(--layout-max-width);
+     margin: var(--spacing-xs) auto; /* Further reduced from --spacing-md */
+
+/* Heading Hierarchy */
+h1 {
+    font-family: var(--font-family-headers);
+    font-size: var(--font-size-heading); /* 40px */
+    font-weight: 700;
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+    color: var(--color-text-primary);
+    margin-top: var(--spacing-heading-top);
+    margin-bottom: 0;
+
+h2 {
+    font-family: var(--font-family-headers);
+    font-size: var(--font-size-title-desktop); /* 30px */
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+    margin-top: calc(var(--spacing-heading-top) * 0.8);
+    margin-bottom: 0;
+
+h3 {
+    font-family: var(--font-family-headers);
+    font-size: var(--font-size-title); /* 24px */
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+    color: var(--color-text-primary);
+    margin-top: calc(var(--spacing-heading-top) * 0.6);
+    margin-bottom: 0;
+
+h4 {
+    font-family: var(--font-family-headers);
+    font-size: var(--font-size-large); /* 20px */
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    color: var(--color-text-primary);
+    margin-top: calc(var(--spacing-heading-top) * 0.5);
+    margin-bottom: 0;
+
+h5, h6 {
+    font-family: var(--font-family-headers);
+    font-size: var(--font-size-nav); /* 18px */
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: var(--color-text-primary);
+    margin-top: calc(var(--spacing-heading-top) * 0.4);
+    margin-bottom: 0;
+
+p {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-text);
+    margin-top: var(--spacing-text-top);
+    margin-bottom: 0;
+
+/* Use Polysans for specific body text sections with ampcode.com inspired styling */
+/* Homepage body text */
+.main-content article p {
+    font-family: var(--font-family-body);
+    font-size: 1.125rem; /* 18px - smaller than current 20px */
+    line-height: 1.6; /* tighter than current 1.5 */
+    color: #666666; /* lighter gray like ampcode */
+    margin-top: 1rem; /* reduced spacing */
+    margin-bottom: 0;
+
+/* Markdown posts body text (but not My Work page) */
+.main-content article:not([data-page="my-work"]) p {
+    font-family: var(--font-family-body);
+    font-size: 1.125rem; /* 18px - smaller for better spacing */
+    line-height: 1.6; /* snug leading like ampcode */
+    color: #666666; /* muted foreground color */
+    margin-top: 1rem; /* reduced from 20px */
+    margin-bottom: 0;
+
+/* My Work page - keep titles as Martina but make descriptions Polysans */
+.job-description {
+    font-family: var(--font-family-body) !important;
+
+.project-description {
+    font-family: var(--font-family-body) !important;
+
+.side-project-card .project-description {
+    font-family: var(--font-family-body) !important;
+
+.item-description {
+    font-family: var(--font-family-body) !important;
+
+/* List styling to match paragraph text */
+ul, ol {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-text);
+    margin-top: var(--spacing-text-top);
+    margin-bottom: 0;
+    padding-left: var(--spacing-lg);
+
+li {
+    margin-bottom: 0.5em;
+
+li:last-child {
+    margin-bottom: 0;
+
+/* Code styling with JetBrains Mono */
+code {
+    font-family: 'JetBrains Mono', 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-size: 0.9em;
+    background-color: var(--color-code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+pre {
+    font-family: 'JetBrains Mono', 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    background-color: var(--color-pre-bg);
+    border: 1px solid var(--color-pre-border);
+    border-radius: 6px;
+    padding: var(--spacing-md);
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+    font-weight: 400;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--color-project-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+.project-card:hover {
+  border-color: #666;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+
+.project-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+.project-logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+
+.project-title-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+.project-title {
+    font-family: var(--font-family-light);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+
+.project-date {
+    font-family: 'JetBrains Mono', 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.2rem;
+    font-weight: 500;
+
+.project-content {
+  margin-top: var(--spacing-sm);
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+  text-align: left;
+
+/* My Work Page Layout */
+.work-container {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+  flex-direction: column;
+
+.work-section {
+  flex: 1;
+
+.work-divider {
+  display: none;
+
+/* Experience Section */
+.experience-item {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+
+.experience-item:last-child {
+  border-bottom: none;
+
+.experience-header {
+  margin-bottom: var(--spacing-sm);
+
+.job-title {
+  font-family: var(--font-family-light);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-xs);
+  color: var(--color-text-primary);
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+.company {
+  font-weight: 600;
+  color: #666;
+
+.period {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+
+.job-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+  color: #555;
+
+.additional-experience {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+
+.additional-experience-text {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+
+.job-cycler {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+
+.job-cycler:hover {
+  background-color: #e0e0e0;
+
+/* Side Projects Section */
+.side-projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+
+.side-project-card {
+  background-color: var(--color-project-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+
+.side-project-card:hover {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+
+.side-project-card .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+
+.side-project-card .project-title {
+  font-family: var(--font-family-light);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+
+.side-project-card .project-title a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+
+.side-project-card .project-title a:hover {
+  text-decoration: underline;
+
+.side-project-card .project-date {
+  font-family: 'JetBrains Mono', 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-size: 0.8rem;
+  color: var(--color-gray-text-secondary);
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+
+.side-project-card .project-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-gray-text);
+  margin: 0 0 var(--spacing-sm) 0;
+  transition: color 0.3s ease;
+
+/* Everything Else Section */
+.everything-else-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Remove gap since we're using line separators */
+
+/* Make the Everything Else section header smaller */
+.work-everything-else h2 {
+  font-size: 1.8rem; /* Smaller than default h2 */
+  margin-bottom: 0.8rem; /* Tighter spacing */
+
+.work-everything-else p {
+  font-size: 0.9rem; /* Smaller description text */
+  margin-bottom: 1rem;
+
+.everything-else-card {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  border-bottom: 1px solid var(--color-border); /* Add bottom line separator */
+  border-radius: 0; /* Remove border radius */
+  padding: 0.8rem 0; /* Vertical padding only, smaller */
+  margin-bottom: 0; /* Remove margin */
+  transition: border-color 0.3s ease;
+
+.everything-else-card:last-child {
+  border-bottom: none; /* Remove line from last item */
+
+/* Remove hover effects for minimal look */
+.everything-else-card:hover {
+  /* No hover effects */
+
+.everything-else-header {
+  margin-bottom: 0.3rem;
+
+.everything-else-card .period {
+  font-size: 0.8rem;
+  color: var(--color-gray-text-secondary);
+  font-style: italic;
+  transition: color 0.3s ease;
+
+.everything-else-card a {
+  color: var(--color-link-subtle);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+.everything-else-card a:hover {
+  text-decoration: underline;
+
+.item-description {
+  font-size: 0.75rem; /* Made even smaller for more minimal look */
+  line-height: 1.3; /* Tighter line height */
+  color: var(--color-gray-text);
+  margin: 0; /* Remove bottom margin */
+  transition: color 0.3s ease;
+
+/* Technology Tags */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
+.tech-tag {
+  display: inline-block;
+  background-color: var(--color-tech-tag-bg);
+  color: var(--color-tech-tag-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+/* Smaller, more subtle tech tags for Everything Else section */
+.everything-else-card .technologies {
+  margin-top: 0.5rem;
+  gap: 0.3rem; /* Smaller gap between tags */
+
+.everything-else-card .tech-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  background-color: var(--color-tech-tag-bg);
+  color: var(--color-gray-text-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+/* Post preview styles */
+.post-preview {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+
+.post-preview:last-child {
+  border-bottom: none;
+
+.post-preview h2 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+
+.post-preview h2 a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+
+.post-preview h2 a:hover {
+  text-decoration: underline;
+
+.post-preview time {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: var(--spacing-sm);
+
+.post-tags {
+  margin-top: var(--spacing-sm);
+
+.tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-right: 0.5em;
+  margin-bottom: 0.25em;
+
+/* --- Sidebar / Header / Nav Styles (Mobile First) --- */
+
+.sidebar {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    height: var(--layout-header-height);
+    padding: 0 var(--spacing-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+.site-header h1 {
+    margin: 0;
+    font-size: var(--font-size-title);
+    font-family: var(--font-family-bold);
+    line-height: 1.2;
+    letter-spacing: normal;
+
+/* Name formatting - two lines */
+.name-first,
+.name-second {
+    display: block;
+
+/* Logo container at top of page */
+.site-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    width: 50%; /* Left half of sidebar */
+    margin-left: auto;
+    margin-right: auto;
+
+.protocol-prefix {
+    font-family: 'JetBrains Mono', 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-right: 0.5rem;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+
+.prefix-part {
+    margin-right: 0.2em;
+
+.path-part {
+    margin-right: 0;
+
+.site-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease, filter 0.3s ease;
+    border-radius: 8px;
+    padding: 4px;
+
+.site-logo:hover {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+
+/* Dark mode styles - variable assignments moved to inlined critical CSS */
+html.dark-mode {
+    /* Smooth transition for the entire theme switch */
+    transition: all 0.3s ease;
+
+/* Dark mode logo inversion for better contrast */
+html.dark-mode .site-logo {
+    filter: invert(1);
+
+/* Dark mode logo hover with inverted colors and light shadow */
+html.dark-mode .site-logo:hover {
+    filter: invert(1) drop-shadow(0 4px 8px rgba(255, 255, 255, 0.15));
+
+/* Dark mode text color improvements */
+html.dark-mode .project-description,
+html.dark-mode .job-description {
+    color: var(--dark-color-gray-text);
+
+html.dark-mode .project-date,
+html.dark-mode .period,
+html.dark-mode .company {
+    color: var(--dark-color-gray-text-secondary);
+
+/* Hamburger button */
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 101;
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    margin: 4px 0;
+    transition: all 0.3s ease, background-color 0.3s ease;
+
+/* Hamburger animation */
+.nav-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+
+.nav-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+
+.nav-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+
+/* Navigation menu */
+.nav-menu {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 150px;
+    z-index: 100;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+.nav-menu.active {
+    display: block;
+
+.main-nav li {
+    margin: 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: border-color 0.3s ease;
+
+.main-nav li:last-child {
+    border-bottom: none;
+
+.main-nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: var(--font-size-nav-mobile);
+    font-family: var(--font-family-nav);
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: color 0.3s ease;
+
+.main-nav a:hover,
+.main-nav a:focus {
+    text-decoration: none; /* Ensure no underline on hover/focus for non-active links */
+    font-style: italic; /* Make text italic on hover/focus */
+
+/* Reserve space for active indicator on all nav links to prevent layout shift */
+.main-nav a::before {
+    content: "> "; /* Reserve space for the indicator */
+    visibility: hidden; /* Hidden by default */
+
+/* Style for the currently active navigation link */
+.main-nav a.nav-link-active {
+    font-style: italic;
+    text-decoration: none; /* Remove underline */
+
+/* Show the '>' for the active link */
+.main-nav a.nav-link-active::before {
+    visibility: visible; /* Make the indicator visible for active link */
+
+/* Ensure hover on active link doesn't change appearance */
+.main-nav a.nav-link-active:hover,
+.main-nav a.nav-link-active:focus {
+   /* Inherit italic style, no text decoration change needed */
+
+/* Remove old header / .header-content rules */
+
+/* Styling for Footer */
+.site-footer {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9em;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+/* --- Desktop Layout Adjustments --- */
+@media (min-width: 900px) { 
+    body {
+        padding-top: 0; /* Remove padding needed for fixed header */
+    }
+
+    .site-container {
+        display: flex; /* Enable flex layout */
+        height: 100vh; /* Full viewport height */
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--layout-sidebar-width);
+        height: 100vh;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        padding: var(--spacing-md); /* Reduced from --spacing-lg */
+        border-right: 1px solid var(--color-border);
+        background-color: var(--color-background-primary);
+        z-index: 10;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .site-header h1 {
+        font-size: var(--font-size-title-desktop);
+        margin-bottom: var(--spacing-sm);
+        flex-shrink: 0;
+    }
+
+    .name-first,
+    .name-second {
+        display: block;
+        line-height: 1.1;
+    }
+
+    .site-logo-container {
+        margin-bottom: var(--spacing-md);
+        justify-content: flex-start;
+        width: 60%;
+        margin-left: 0;
+        padding-left: var(--spacing-sm);
+    }
+
+    .protocol-prefix {
+        font-size: 2.1rem;
+        margin-right: 0.7rem;
+    }
+
+    .prefix-part {
+        margin-right: 0.25em;
+    }
+
+    .site-logo {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .site-logo:hover {
+        filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+    }
+    
+    /* Dark mode desktop logo hover */
+    html.dark-mode .site-logo:hover {
+        filter: invert(1) drop-shadow(0 6px 12px rgba(255, 255, 255, 0.2));
+    }
+
+    .main-nav {
+        /* Push nav to vertical center */
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    /* Hide hamburger on desktop */
+    .nav-toggle {
+        display: none;
+    }
+
+    /* Show menu on desktop */
+    .nav-menu {
+        display: flex !important;
+        flex-direction: column;
+        position: static;
+        background: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        min-width: auto;
+    }
+
+    .main-nav li {
+        margin: 0 0 0.75em 0;
+        border-bottom: none;
+    }
+
+    .main-nav a {
+        font-size: var(--font-size-nav);
+        font-family: var(--font-family-nav);
+        padding: 0;
+    }
+
+    .main-content {
+        flex-grow: 1;
+        margin-left: var(--layout-sidebar-width);
+        padding: var(--content-margin-top) var(--content-margin-horizontal) var(--content-margin-bottom);
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        overflow-y: auto;
+        height: 100vh;
+        box-sizing: border-box;
+        /* Hide scrollbars for main content too */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+    .main-content::-webkit-scrollbar {
+        display: none; /* WebKit browsers */
+    }
+
+    .main-content article {
+        /* Keep article centered, minimal margins */
+        margin: 0 auto;
+        padding-bottom: var(--spacing-sm); /* Reduced from --spacing-lg */
+    }
+
+
+
+
+
+    /* Desktop improvements for projects */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--spacing-xl);
+    }
+
+    .project-card {
+        padding: var(--spacing-xl);
+    }
+
+    .project-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .project-logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    /* Override article max-width for My Work page using a class-based approach */
+    body .main-content article {
+        max-width: var(--layout-max-width); /* Default for all pages */
+    }
+    
+    /* Remove max-width constraint for the work container specifically */
+    .work-container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Ensure parent article doesn't constrain the work container */
+    .main-content article:has(.work-container),
+    .main-content article[data-page="my-work"] {
+        max-width: none;
+        width: 100%;
+    }
+
+    /* Desktop layout for My Work page - 3 columns with independent scrolling */
+    .work-container {
+        display: grid;
+        grid-template-columns: var(--work-section-1-ratio) auto var(--work-section-2-ratio) auto var(--work-section-3-ratio);
+        gap: 0;
+        align-items: flex-start;
+        height: calc(100vh - var(--content-margin-top) - var(--content-margin-bottom) - 2rem);
+        overflow: hidden; /* Prevent horizontal scroll on the container */
+        
+        /* Apply controllable side margins */
+        margin-left: var(--work-container-side-margin);
+        margin-right: var(--work-container-side-margin);
+        width: calc(100% - var(--work-container-side-margin) * 2);
+    }
+
+    .work-section {
+        height: 100%;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        overflow-y: auto; /* Allow vertical scrolling */
+        padding: 0 var(--spacing-xs); /* Add minimal side padding for readability */
+        position: relative;
+        /* Hide scrollbars completely */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+    /* Hide scrollbars for WebKit browsers */
+    .work-section::-webkit-scrollbar {
+        display: none;
+    }
+
+    .work-divider {
+        display: block;
+        width: 1px;
+        background-color: var(--color-border);
+        height: 100%;
+        flex-shrink: 0;
+        margin: 0 var(--work-divider-spacing);
+    }
+
+    .job-meta {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .side-projects-grid,
+    .everything-else-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+
+
+/* Mobile heading adjustments for better readability on small screens */
+@media (max-width: 599px) {
+    h1 {
+        font-size: calc(var(--font-size-heading) * 0.75); /* 30px */
+        line-height: 1.2;
+        margin-top: calc(var(--spacing-heading-top) * 0.7);
+    }
+    
+    h2 {
+        font-size: var(--font-size-title); /* 24px */
+        line-height: 1.3;
+        margin-top: calc(var(--spacing-heading-top) * 0.6);
+    }
+    
+    h3 {
+        font-size: var(--font-size-large); /* 20px */
+        line-height: 1.4;
+        margin-top: calc(var(--spacing-heading-top) * 0.5);
+    }
+    
+    h4 {
+        font-size: var(--font-size-nav); /* 18px */
+        line-height: 1.5;
+        margin-top: calc(var(--spacing-heading-top) * 0.4);
+    }
+    
+    h5, h6 {
+        font-size: var(--font-size-base); /* 16px */
+        line-height: 1.5;
+        margin-top: calc(var(--spacing-heading-top) * 0.3);
+    }
+    
+    /* Mobile list adjustments */
+    ul, ol {
+        font-size: var(--font-size-nav); /* 18px - slightly smaller than desktop */
+        padding-left: var(--spacing-md); /* Reduced left padding for mobile */
+    }
+} 
+/* Lists in body content should also use Polysans with ampcode styling */
+.main-content article ul,
+.main-content article ol {
+    font-family: var(--font-family-body);
+    font-size: 1.125rem; /* 18px - matching paragraph text */
+    line-height: 1.6; /* snug leading */
+    color: #666666; /* muted color */
+    margin-top: 1rem; /* reduced spacing */
+    margin-bottom: 0;
+    padding-left: 1.5rem; /* reduced from 2rem */
+
+.main-content article li {
+    margin-bottom: 0.25rem; /* tighter list item spacing */
+
+.main-content article li:last-child {
+    margin-bottom: 0;
+
+/* But exclude My Work page lists from this rule */
+.main-content article[data-page="my-work"] ul,
+.main-content article[data-page="my-work"] ol {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-large); /* keep original size */
+    line-height: var(--line-height-text);
+    color: var(--color-text-primary); /* keep original color */
+    margin-top: var(--spacing-text-top);
+    padding-left: var(--spacing-lg);
+
+.main-content article[data-page="my-work"] li {
+    margin-bottom: 0.5em; /* keep original spacing */
+
+

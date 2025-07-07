@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.language | default: 'en' }}">
+<head>
+    {% include "partials/head.liquid" %}
+</head>
+<body>
+    <div class="site-container">
+        <aside class="sidebar">
+            <div class="site-logo-container">
+                <span class="protocol-prefix">
+                    <span class="prefix-part">::</span>
+                    <span class="path-part">~/</span>
+                </span>
+                <img src="/assets/logo.png" alt="{{ site.author }} Logo" class="site-logo">
+            </div>
+            <header class="site-header">
+                <h1>
+                    <span class="name-first">Mani</span>
+                    <span class="name-second">Rash Ahmadi</span>
+                </h1>
+            </header>
+            {% include "partials/navigation.liquid" %}
+        </aside>
+
+        <main class="main-content">
+            <article id="content-area">
+                {{ content }}
+            </article>
+            {% include "partials/footer.liquid" %}
+        </main>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,178 @@
+{
+  "title": "My Portfolio",
+  "description": "A personal portfolio website built with Eleventy",
+  "author": "Mani Rash Ahmadi",
+  "url": "https://yoursite.com",
+  "language": "en",
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "My Work",
+      "url": "/my-work/"
+    },
+    {
+      "title": "Posts",
+      "url": "/posts/"
+    },
+    {
+      "title": "About",
+      "url": "/about/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio Website",
+      "description": "A modern, responsive portfolio built with Eleventy and custom CSS design system.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/yourname/portfolio",
+      "featured": true
+    },
+    {
+      "name": "E-Commerce Platform", 
+      "description": "Full-stack web application with payment integration and inventory management.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/yourname/ecommerce",
+      "featured": true
+    },
+    {
+      "name": "Data Visualization Tool",
+      "description": "Interactive dashboard for analyzing complex datasets with D3.js and Python backend.",
+      "logo": "/assets/logo.png", 
+      "url": "https://github.com/yourname/dataviz",
+      "featured": true
+    },
+    {
+      "name": "Mobile Weather App",
+      "description": "Cross-platform mobile app with real-time weather data and location services.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/yourname/weather-app",
+      "featured": true
+    },
+    {
+      "name": "Machine Learning Model",
+      "description": "Predictive analytics model for customer behavior analysis using TensorFlow.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/yourname/ml-model",
+      "featured": true
+    },
+    {
+      "name": "API Gateway Service",
+      "description": "Microservices architecture with Docker containerization and automated deployment.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/yourname/api-gateway",
+      "featured": true
+    }
+  ],
+  "experience": [
+    {
+      "title": "Research Assistant - Generative AI in IT Services",
+      "company": "University of Guelph",
+      "period": "Mar 2025 - Present",
+      "description": "Conducting research on the application of generative AI technologies in IT service management and operations. Exploring machine learning models for automated incident resolution and service optimization.",
+      "technologies": ["Generative AI", "Machine Learning", "Python", "Research Methods"]
+    },
+    {
+      "title": "Network Infrastructure Student Technician",
+      "company": "University of Guelph",
+      "period": "May 2024 - Aug 2024",
+      "description": "Performed campus-wide Wi-Fi surveys to improve internet coverage in dense student environments. Collaborated with team members for efficient network repairs and troubleshooting. Gained hands-on experience in Cisco environment and assisted in migrating databases into NetBox for unified network source of truth.",
+      "technologies": ["Cisco", "NetBox", "Wi-Fi Systems", "Network Troubleshooting", "Database Migration"]
+    },
+    {
+      "title": "Information Technology Administrator",
+      "company": "Zamand International Shipping and Transport Co.",
+      "period": "Sep 2019 - Nov 2021",
+      "description": "Managed IT infrastructure and systems for international shipping operations. Administered network systems, maintained databases, and provided technical support for logistics operations across multiple locations.",
+      "technologies": ["System Administration", "Network Management", "Database Administration", "IT Support"]
+    }
+  ],
+  "side_projects": [
+    {
+      "name": "wispr",
+      "description": "Production-grade voice-to-text system for macOS using Fn key as global trigger. Features native Cocoa integration, real-time AssemblyAI streaming, background service architecture, and robust error handling. Built as Wispr Flow alternative.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/wispr",
+      "technologies": ["Python", "macOS Cocoa", "AssemblyAI", "WebSocket", "PyAudio", "launchd"],
+      "date": "2025-06-01"
+    },
+    {
+      "name": "Sorya (Entangled LLM)",
+      "description": "Novel AI architecture enabling LLMs to make irreversible internal commitments and maintain consistent identity. Implements variational latent commitment vectors, QLoRA training, and mathematical framework for AI consciousness research.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/sorya/tree/main",
+      "technologies": ["PyTorch", "QLoRA", "Llama-2", "CUDA", "Variational Inference", "RLHF"],
+      "date": "2025-05-15"
+    },
+    {
+      "name": "AEP (Attention Event Protocol)",
+      "description": "Experimental framework for improving AI systems by tracking attention patterns. Built logging SDK, RAG integration, and evaluation tools showing attention-weighted re-ranking can improve Precision@5 from ~0.75 to ~0.87.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/aep",
+      "technologies": ["Python", "LangChain", "OpenAI", "FAISS", "FastAPI", "React", "RAG"],
+      "date": "2025-05-01"
+    },
+    {
+      "name": "The Box",
+      "description": "RFID-enhanced physical item tracker combining Arduino hardware with PWA frontend and backend API. Features Wi-Fi provisioning, real-time tag scanning, item presence tracking, and web-based item management interface.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/theboxproject",
+      "technologies": ["Arduino", "RFID", "PWA", "Backend API", "Wi-Fi", "IoT"],
+      "date": "2025-04-01"
+    },
+    {
+      "name": "Apple MCP (OSS Contribution)",
+      "description": "Open source contribution to Apple-native tools for Model Context Protocol. Implemented comprehensive email functionality including multi-recipient support, attachments, scheduling, and search capabilities. Project has 2k+ GitHub stars.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/supermemoryai/apple-mcp",
+      "technologies": ["TypeScript", "AppleScript", "MCP", "Email APIs", "Open Source"],
+      "date": "2024-12-01"
+    },
+    {
+      "name": "Arboro",
+      "description": "Community event series (previously Crescentia) inspired by Socratica, hosting weekly work sessions where creatives, enthusiasts, and professionals gather for collaborative productivity and networking.",
+      "logo": "/assets/logo.png",
+      "url": "https://x.com/JoinCrescentia",
+      "technologies": ["Community Building", "Event Management", "Leadership", "Networking"],
+      "date": "2024-11-01"
+    },
+    {
+      "name": "mnist-from-scratch",
+      "description": "Educational neural network implementation from scratch in Python for MNIST handwritten digit classification. Built without high-level ML frameworks to demonstrate fundamentals of neural architecture, training, and evaluation.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/mnist-from-scratch",
+      "technologies": ["Python", "NumPy", "Matplotlib", "Neural Networks"],
+      "date": "2024-03-19"
+    },
+    {
+      "name": "typing-game",
+      "description": "React web app to test typing speed with real-time accuracy tracking, visual feedback for keystrokes, and random sentence generation from dictionary.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/typing-game",
+      "technologies": ["React", "JavaScript", "CSS", "HTML"],
+      "date": "2024-03-07"
+    },
+    {
+      "name": "cinefile",
+      "description": "Movie archive assistant built with Python and Qt frontend. Uses IMDb API to automatically organize movie folders and manage your personal film collection with metadata.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/CineFile",
+      "technologies": ["Python", "Qt", "IMDb API", "Raspberry Pi"],
+      "date": "2020-10-03"
+    }
+  ],
+  "everything_else": [
+    {
+      "description": "Volunteered at the <a href=\"https://uwaterloo.ca/engineering/news/student-collective-brings-thousands-makers-together\" target=\"_blank\" rel=\"noopener noreferrer\">Socratica Symposium 2025</a> in Waterloo, helping coordinate and manage an international maker collective event that brought together over 2,500 students from multiple disciplines to build, innovate, and collaborate on projects spanning art, engineering, business, and design.",
+      "period": "March 2025",
+      "date": "2025-03-27"
+    },
+    {
+      "description": "Ranked 394th in Iran's national university entrance exam (Konkur) in mathematics and physics, earning admission to K. N. Toosi University of Technology (KNTU).",
+      "period": "2019",
+      "date": "2019-07-01"
+    }
+  ]
+}
