@@ -83,4 +83,80 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
         });
     }
+    
+    // SPA-style navigation to prevent FOUC
+    function initSPANavigation() {
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        const mainContent = document.querySelector('#content-area');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Skip SPA for external links or special cases
+                if (!href || href.startsWith('http') || href.startsWith('#') || href.includes('mailto:')) {
+                    return;
+                }
+                
+                e.preventDefault();
+                
+                // Update active nav state immediately
+                document.querySelectorAll('.nav-link-active').forEach(activeLink => {
+                    activeLink.classList.remove('nav-link-active');
+                });
+                this.classList.add('nav-link-active');
+                
+                // Fetch new content
+                fetch(href)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const newDoc = parser.parseFromString(html, 'text/html');
+                        const newContent = newDoc.querySelector('#content-area');
+                        const newTitle = newDoc.querySelector('title');
+                        
+                        if (newContent && mainContent) {
+                            // Update content with smooth transition
+                            mainContent.style.opacity = '0.7';
+                            setTimeout(() => {
+                                mainContent.innerHTML = newContent.innerHTML;
+                                mainContent.style.opacity = '1';
+                                
+                                // Update page title
+                                if (newTitle) {
+                                    document.title = newTitle.textContent;
+                                }
+                                
+                                // Update URL
+                                window.history.pushState({}, '', href);
+                                
+                                // Re-initialize any page-specific scripts
+                                initPageSpecificFeatures();
+                            }, 100);
+                        }
+                    })
+                    .catch(error => {
+                        console.log('SPA navigation failed, falling back to normal navigation');
+                        window.location.href = href;
+                    });
+            });
+        });
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+            window.location.reload();
+        });
+    }
+    
+    function initPageSpecificFeatures() {
+        // Re-initialize job cycler if present
+        const jobCycler = document.querySelector('#job-cycler');
+        if (jobCycler && !jobCycler.hasAttribute('data-initialized')) {
+            jobCycler.setAttribute('data-initialized', 'true');
+            // Job cycler code would go here if needed
+        }
+    }
+    
+    // Initialize SPA navigation
+    initSPANavigation();
 }); 

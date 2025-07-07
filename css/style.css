@@ -233,7 +233,7 @@ p {
     font-family: var(--font-family-body);
     font-size: 1.125rem; /* 18px - smaller for better spacing */
     line-height: 1.6; /* snug leading like ampcode */
-    color: #666666; /* muted foreground color */
+    color: var(--color-text-secondary); /* same as My Work body text */
     margin-top: 1rem; /* reduced from 20px */
     margin-bottom: 0;
 }
@@ -270,7 +270,7 @@ ul, ol {
     font-family: var(--font-family-body);
     font-size: 1.125rem; /* 18px - matching paragraph text */
     line-height: 1.6; /* snug leading */
-    color: #666666; /* muted color */
+    color: var(--color-text-secondary); /* same as My Work body text */
     margin-top: 1rem; /* reduced spacing */
     margin-bottom: 0;
     padding-left: 1.5rem; /* reduced from 2rem */
@@ -323,9 +323,14 @@ li:last-child {
     padding: 2rem 1.5rem;
     box-sizing: border-box;
     border-right: 1px solid var(--color-border);
-    overflow-y: auto;
+    overflow-y: overlay;
+    scrollbar-width: none;
     display: flex;
     flex-direction: column;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .main-content {
@@ -356,30 +361,18 @@ li:last-child {
     height: 48px;
     transition: all 0.3s ease;
     cursor: pointer;
-    position: relative;
 }
 
-.site-logo::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 88, 33, 0.3) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.site-logo:hover::before {
-    opacity: 1;
+.site-logo:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 88, 33, 0.8)) drop-shadow(0 0 20px rgba(255, 88, 33, 0.4));
 }
 
 html.dark-mode .site-logo {
     filter: invert(1);
+}
+
+html.dark-mode .site-logo:hover {
+    filter: invert(1) drop-shadow(0 0 10px rgba(255, 88, 33, 0.8)) drop-shadow(0 0 20px rgba(255, 88, 33, 0.4));
 }
 
 /* Site Header in Sidebar */
@@ -409,6 +402,7 @@ html.dark-mode .site-logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .nav-toggle {
@@ -419,6 +413,8 @@ html.dark-mode .site-logo {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
+    left: 0;
 }
 
 .nav-menu li {
@@ -444,11 +440,14 @@ html.dark-mode .site-logo {
 .nav-menu a.nav-link-active {
     font-style: italic;
     color: var(--color-text-primary);
+    position: relative;
 }
 
 .nav-menu a.nav-link-active::before {
     content: ">";
-    margin-right: 0.5rem;
+    position: absolute;
+    left: -1rem;
+    margin-right: 0;
 }
 
 /* Mobile Navigation */
