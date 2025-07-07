@@ -28,8 +28,9 @@
 <style>
 :root {
   /* Light Mode Design Tokens */
-  --color-text-primary: rgb(6, 6, 6);
-  --color-background-primary: rgb(227, 227, 227);
+  --color-text-primary: #000000;
+  --color-background-primary: #ffffff;
+  --color-text-secondary: #666666;
   --color-border: #ccc;
   --color-code-bg: #f5f5f5;
   --color-pre-bg: #f8f8f8;
@@ -39,6 +40,7 @@
   /* Dark Mode Design Tokens */
   --dark-color-text-primary: rgb(220, 220, 220);
   --dark-color-background-primary: rgb(20, 20, 20);
+  --dark-color-text-secondary: #999;
   --dark-color-border: #444;
   --dark-color-code-bg: #2a2a2a;
   --dark-color-pre-bg: #1e1e1e;
@@ -56,20 +58,6 @@
   --color-tech-tag-bg: #f0f0f0;
   --color-tech-tag-text: #333;
   --color-link-subtle: #333;
-  
-  /* Typography */
-  --font-family-light: "Martina Light", serif;
-  --font-family-bold: "Martina Bold", serif;
-  --font-size-base: 16px;
-  --font-size-large: 20px;
-  --line-height-base: 1.6;
-  --line-height-text: 1.5;
-  
-  /* Layout */
-  --layout-max-width: 740px;
-  --layout-header-height: 80px;
-  --spacing-md: 1.5em;
-  --spacing-xs: 0.5em;
 }
 
 @font-face {
@@ -89,9 +77,9 @@
 }
 
 body {
-    font-family: var(--font-family-light);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: "Martina Light", serif;
+    font-size: 16px;
+    line-height: 1.6;
     color: var(--color-text-primary);
     margin: 0;
     padding: 0;
@@ -100,21 +88,10 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.main-content {
-    padding-top: var(--layout-header-height);
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: var(--spacing-md);
-}
-
-.main-content article {
-     max-width: var(--layout-max-width);
-     margin: var(--spacing-xs) auto;
-}
-
 html.dark-mode {
   --color-text-primary: var(--dark-color-text-primary);
   --color-background-primary: var(--dark-color-background-primary);
+  --color-text-secondary: var(--dark-color-text-secondary);
   --color-border: var(--dark-color-border);
   --color-code-bg: var(--dark-color-code-bg);
   --color-pre-bg: var(--dark-color-pre-bg);

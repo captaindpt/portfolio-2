@@ -1,3 +1,6 @@
+### 2025-07-07 12:11
+🔧 Initialized git repository and made initial commit (d31153b) - portfolio now under version control
+
 ### 2025-07-03 13:14
 Fixed navigation text shifting issue. Reserved space for '>' indicator on all nav links to prevent layout shift when My Work becomes active.
 

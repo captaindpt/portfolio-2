@@ -9,7 +9,7 @@ permalink: /my-work/
     <h2>Professional Experience</h2>
     <p>My journey through various roles in technology, from IT administration to AI research.</p>
     <div class="experience-list">
-      {% for job in site.experience %}
+      {%- for job in site.experience -%}
       <div class="experience-item">
         <div class="experience-header">
           <h3 class="job-title">{{ job.title }}</h3>
@@ -25,7 +25,7 @@ permalink: /my-work/
           {%- endfor -%}
         </div>
       </div>
-      {% endfor %}
+      {%- endfor -%}
     </div>
     
     <div class="additional-experience">

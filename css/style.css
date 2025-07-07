@@ -55,6 +55,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Perfectly Nineties';
+  src: url('../assets/fonts/perfectly-nineties-regular-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   /* Additional Design Tokens (base tokens now inlined in head) */
   
@@ -100,10 +108,11 @@
   --work-container-side-margin: 12.5vw; /* Current: 1/8 of viewport width each side */
   
   /* Work Section Size Ratios (adjust these to change section sizes) */
-  --work-section-1-ratio: 1.2fr; /* Professional Experience - slightly larger */
-  --work-section-2-ratio: 1.3fr; /* Side Projects - largest section */
-  --work-section-3-ratio: 0.7fr; /* Everything Else - smaller */
+  --work-section-1-ratio: 0.40fr; /* Professional Experience - 40% */
+  --work-section-2-ratio: 0.35fr; /* Side Projects - 35% */
+  --work-section-3-ratio: 0.25fr; /* Everything Else - 25% */
   --work-divider-spacing: 0.8rem; /* Space between sections */
+  
 }
 
 body {
@@ -131,6 +140,13 @@ body {
 .main-content article {
      max-width: var(--layout-max-width);
      margin: var(--spacing-xs) auto; /* Further reduced from --spacing-md */
+}
+
+/* Exception for My Work page - use 70% width */
+.main-content article:has(.work-container) {
+     max-width: none;
+     margin: 0 auto;
+     width: 70%;
 }
 
 /* Heading Hierarchy */
@@ -275,4 +291,457 @@ li:last-child {
     margin-bottom: 0;
 }
 
-/* Placeholder for rest of CSS - this just gets the basics working */
+/* Sidebar Navigation */
+.site-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--layout-sidebar-width);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: var(--color-background-primary);
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    border-right: 1px solid #e5e5e5;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    margin-left: var(--layout-sidebar-width);
+    flex: 1;
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Logo and Protocol Prefix */
+.site-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.protocol-prefix {
+    font-family: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+    font-size: 32px;
+    color: var(--color-text-primary);
+}
+
+.site-logo {
+    width: 48px;
+    height: 48px;
+    transition: filter 0.3s ease;
+}
+
+html.dark-mode .site-logo {
+    filter: invert(1);
+}
+
+/* Site Header in Sidebar */
+.site-header {
+    margin-bottom: 2rem;
+}
+
+.site-header h1 {
+    font-family: var(--font-family-nav);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0;
+    color: var(--color-text-primary);
+}
+
+.name-first,
+.name-second {
+    display: block;
+}
+
+/* Navigation Styles */
+.main-nav {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none; /* Hide hamburger for desktop */
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-nav);
+    font-weight: 300;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-text-secondary);
+}
+
+/* Active navigation state */
+.nav-menu a.nav-link-active {
+    font-style: italic;
+    color: var(--color-text-primary);
+}
+
+.nav-menu a.nav-link-active::before {
+    content: ">";
+    margin-right: 0.5rem;
+}
+
+/* Mobile Navigation */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 1rem;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hamburger-line {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--color-text-primary);
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: block;
+    }
+}
+
+/* My Work Section - 3 Column Layout */
+.work-container {
+    display: grid;
+    grid-template-columns: var(--work-section-1-ratio) var(--work-divider-spacing) var(--work-section-2-ratio) var(--work-divider-spacing) var(--work-section-3-ratio);
+    gap: 0;
+    height: calc(100vh - 4rem); /* Full height minus main content padding */
+    width: 100%; /* Take up full available width */
+    margin: 0; /* Remove margins */
+    overflow: hidden;
+}
+
+.work-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 1rem;
+    padding-left: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.work-section::-webkit-scrollbar {
+    display: none;
+}
+
+.work-section {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.work-divider {
+    width: 1px;
+    background: #e5e5e5;
+    height: 100%;
+    justify-self: center;
+}
+
+.work-section h2 {
+    font-family: "Perfectly Nineties", Georgia, "Times New Roman", serif;
+    font-size: calc(var(--font-size-title) * 1.5);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+    position: sticky;
+    top: 0;
+    background: var(--color-background-primary);
+    padding: 0.5rem 0;
+    z-index: 1;
+}
+
+.work-section > p {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Experience Section */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.experience-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.75rem;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    margin-bottom: 1rem;
+}
+
+.job-title {
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text-primary);
+}
+
+.job-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.company {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+}
+
+.period {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.job-description {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.additional-experience {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.additional-experience-text {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.job-cycler {
+    font-style: italic;
+    color: var(--color-text-primary);
+}
+
+/* Side Projects Section */
+.side-projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.side-project-card {
+    background: var(--color-project-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.side-project-card:last-child {
+    margin-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    margin: 0;
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+}
+
+.project-title a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.project-title a:hover {
+    text-decoration: underline;
+}
+
+.project-date {
+    font-family: var(--font-family-light);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+.project-description {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Everything Else Section */
+.everything-else-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.everything-else-card {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+}
+
+.everything-else-card:last-child {
+    border-bottom: none;
+}
+
+.everything-else-header {
+    margin-bottom: 1rem;
+}
+
+.item-title {
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text-primary);
+}
+
+.item-description {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Technology Tags */
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #f5f5f5;
+    border-radius: 16px;
+    font-family: var(--font-family-light);
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    border: 1px solid #e5e5e5;
+    white-space: nowrap;
+}
+
+/* Footer */
+.site-footer {
+    margin-left: var(--layout-sidebar-width);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    background: var(--color-background-primary);
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-light);
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .work-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        margin: 0 1rem;
+        gap: 2rem;
+    }
+    
+    .work-section {
+        height: auto;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+    
+    .work-divider {
+        display: none;
+    }
+    
+    .work-section h2 {
+        position: static;
+        background: transparent;
+        padding: 0;
+    }
+    
+    .site-footer {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
