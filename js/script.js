@@ -150,13 +150,40 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function initPageSpecificFeatures() {
         // Re-initialize job cycler if present
+        initJobCycler();
+    }
+    
+    function initJobCycler() {
         const jobCycler = document.querySelector('#job-cycler');
+        
         if (jobCycler && !jobCycler.hasAttribute('data-initialized')) {
+            const jobs = [
+                'construction worker',
+                'painter', 
+                'line cook',
+                'social media marketing',
+                'door to door salesman',
+                'private tutor'
+            ];
+            
+            let currentJobIndex = 0;
+            
+            jobCycler.addEventListener('click', function() {
+                currentJobIndex = (currentJobIndex + 1) % jobs.length;
+                jobCycler.textContent = jobs[currentJobIndex];
+            });
+            
             jobCycler.setAttribute('data-initialized', 'true');
-            // Job cycler code would go here if needed
+            
+            // Add visual indication that it's clickable
+            jobCycler.style.cursor = 'pointer';
+            jobCycler.style.textDecoration = 'underline';
         }
     }
     
     // Initialize SPA navigation
     initSPANavigation();
+    
+    // Initialize page-specific features on initial load
+    initPageSpecificFeatures();
 }); 

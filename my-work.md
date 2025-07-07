@@ -7,7 +7,7 @@ permalink: /my-work/
 <div class="work-container">
   <div class="work-section work-experience">
     <h2>Professional Experience</h2>
-    <p>My journey through various roles in technology, from IT administration to AI research.</p>
+    <p>My journey through various roles in technology, from IT administration to AI research. If you want a PDF copy of my resume, you can <a href="https://drive.google.com/file/d/1tFymABAQl-0r06U2AT83Jpexy8WlVKfI/view?usp=drive_link" target="_blank" rel="noopener noreferrer">get it here</a>.</p>
     <div class="experience-list">
       {%- for job in site.experience -%}
       <div class="experience-item">

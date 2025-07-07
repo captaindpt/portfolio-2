@@ -626,6 +626,12 @@ html.dark-mode .site-logo:hover {
 .job-cycler {
     font-style: italic;
     color: var(--color-text-primary);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.job-cycler:hover {
+    color: var(--color-accent-red);
 }
 
 /* Side Projects Section */
@@ -694,7 +700,7 @@ html.dark-mode .site-logo:hover {
 }
 
 .everything-else-card {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 1.5rem;
 }
 
@@ -773,6 +779,36 @@ a:hover {
 ::-moz-selection {
     background-color: rgba(255, 88, 33, 0.5);
     color: black;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--color-accent-red);
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease;
 }
 
 /* Mobile Responsive */
