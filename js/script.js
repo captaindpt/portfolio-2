@@ -1,36 +1,36 @@
 // This file is no longer needed for Markdown rendering with Eleventy.
 // It can be used for other client-side interactivity later if needed. 
 
-// Hamburger menu functionality
+// Mobile hamburger menu functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
     
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+    if (mobileNavToggle && mobileNav) {
+        mobileNavToggle.addEventListener('click', function() {
             // Toggle active class on button (for animation)
-            navToggle.classList.toggle('active');
+            mobileNavToggle.classList.toggle('active');
             
             // Toggle active class on menu (to show/hide)
-            navMenu.classList.toggle('active');
+            mobileNav.classList.toggle('active');
         });
 
         // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a');
+        const navLinks = document.querySelectorAll('.mobile-nav-menu a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
+                mobileNavToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
             });
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            const isClickInsideNav = navToggle.contains(event.target) || navMenu.contains(event.target);
+            const isClickInsideNav = mobileNavToggle.contains(event.target) || mobileNav.contains(event.target);
             
-            if (!isClickInsideNav && navMenu.classList.contains('active')) {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
+            if (!isClickInsideNav && mobileNav.classList.contains('active')) {
+                mobileNavToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
             }
         });
     }

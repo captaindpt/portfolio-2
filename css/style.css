@@ -450,46 +450,132 @@ html.dark-mode .site-logo:hover {
     margin-right: 0;
 }
 
-/* Mobile Navigation */
+/* Mobile Header */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--color-background-primary);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.mobile-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobile-name {
+    font-family: "Copernicus", Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.mobile-name .name-first,
+.mobile-name .name-second {
+    display: inline;
+}
+
+.mobile-name .name-first::after {
+    content: " ";
+}
+
+.mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-arrow {
+    color: var(--color-text-primary);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-toggle.active .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-nav {
+    display: none;
+    background: var(--color-background-primary);
+    border-top: 1px solid var(--color-border);
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-menu li {
+    margin: 0;
+}
+
+.mobile-nav-menu a {
+    display: block;
+    padding: 1rem;
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-nav);
+    font-weight: 300;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav-menu a:hover {
+    background-color: var(--color-tech-tag-bg);
+    color: var(--color-accent-red);
+}
+
+.mobile-nav-menu a.nav-link-active {
+    font-style: italic;
+    background-color: var(--color-tech-tag-bg);
+}
+
+.mobile-nav-menu a.nav-link-active::before {
+    content: "> ";
+}
+
+/* Mobile Layout */
 @media (max-width: 900px) {
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid #e5e5e5;
-        padding: 1rem;
+        display: none;
+    }
+    
+    .mobile-header {
+        display: block;
     }
     
     .main-content {
         margin-left: 0;
-        padding: 1rem;
+        padding-top: 80px; /* Account for fixed mobile header */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
     }
     
     .nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .hamburger-line {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: var(--color-text-primary);
-        margin: 4px 0;
-        transition: 0.3s;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
-    
-    .nav-menu.active {
-        display: block;
+        display: none; /* Hide desktop nav toggle */
     }
 }
 
@@ -811,19 +897,23 @@ a:hover {
     transition: all 0.2s ease;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive Work Section */
 @media (max-width: 900px) {
     .work-container {
         grid-template-columns: 1fr;
         height: auto;
-        margin: 0 1rem;
+        margin: 0;
         gap: 2rem;
+        padding: 0 1rem;
     }
     
     .work-section {
         height: auto;
         overflow-y: visible;
         padding-right: 0;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .work-divider {
@@ -834,10 +924,17 @@ a:hover {
         position: static;
         background: transparent;
         padding: 0;
+        margin-bottom: 1.5rem;
     }
     
     .site-footer {
         margin-left: 0;
         padding: 1rem;
+    }
+    
+    /* Ensure full width on mobile */
+    .main-content article:has(.work-container) {
+        width: 100%;
+        max-width: none;
     }
 }

@@ -5,6 +5,41 @@
 </head>
 <body>
     <div class="site-container">
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <div class="mobile-header-content">
+                <div class="mobile-logo-container">
+                    <span class="protocol-prefix">
+                        <span class="prefix-part">::</span>
+                        <span class="path-part">~/</span>
+                    </span>
+                    <img src="/assets/logo.png" alt="{{ site.author }} Logo" class="site-logo">
+                </div>
+                <div class="mobile-name">
+                    <span class="name-first">Mani</span>
+                    <span class="name-second">Rash Ahmadi</span>
+                </div>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="nav-arrow">
+                        <path d="M8 10L12 14L16 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    {% for item in site.navigation %}
+                        <li>
+                            <a href="{{ item.url }}" 
+                               {% if page.url == item.url %} class="nav-link-active"{% endif %}>
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Desktop Sidebar -->
         <aside class="sidebar">
             <div class="site-logo-container">
                 <span class="protocol-prefix">
