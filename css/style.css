@@ -846,6 +846,56 @@ html.dark-mode .site-logo:hover {
     font-size: 14px;
 }
 
+/* ASCII Animation Styles */
+.ascii-animation-container {
+    width: 100%;
+    max-width: calc(var(--layout-max-width) * 1.1); /* 10% bigger than markdown max-width */
+    margin: 0 auto 2rem auto;
+    padding: 0;
+    display: block;
+}
+
+.ascii-animation-display {
+    font-family: 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+    font-size: 10px;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--color-text-primary);
+    overflow: hidden;
+    white-space: pre;
+    text-align: left;
+    border: none;
+    transition: color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .ascii-animation-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 1rem 0;
+        padding: 0;
+    }
+    
+    .ascii-animation-display {
+        font-size: 6px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .ascii-animation-display {
+        font-size: 5px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 /* Link and selection styling */
 a {
     color: var(--color-text-primary);

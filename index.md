@@ -3,6 +3,8 @@ layout: layout.liquid
 title: Home
 ---
 
+<div id="ascii-animation-container" class="ascii-animation-container"></div>
+
 # welcome
 
 i make things. paintings, songs, communities, robots, and now, artificial brains.
