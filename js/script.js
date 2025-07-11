@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Dark mode toggle functionality
-    const siteLogo = document.querySelector('.site-logo');
+    const siteLogos = document.querySelectorAll('.site-logo');
     
-    if (siteLogo) {
+    if (siteLogos.length > 0) {
         // Check for saved theme preference or default to light mode
         const currentTheme = localStorage.getItem('theme') || 'light';
         
@@ -68,19 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.classList.add('dark-mode');
         }
         
-        // Add click event listener to toggle dark mode
-        siteLogo.addEventListener('click', function() {
-            document.documentElement.classList.toggle('dark-mode');
-            
-            // Save theme preference
-            const isDarkMode = document.documentElement.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-            
-            // Optional: Add a subtle feedback animation
-            siteLogo.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                siteLogo.style.transform = '';
-            }, 150);
+        // Add click event listener to all logos to toggle dark mode
+        siteLogos.forEach(logo => {
+            logo.addEventListener('click', function() {
+                document.documentElement.classList.toggle('dark-mode');
+                
+                // Save theme preference
+                const isDarkMode = document.documentElement.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+                
+                // Optional: Add a subtle feedback animation to clicked logo
+                logo.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    logo.style.transform = '';
+                }, 150);
+            });
         });
     }
     

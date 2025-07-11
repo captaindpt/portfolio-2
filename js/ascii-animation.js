@@ -36,7 +36,8 @@ class ASCIIAnimationPlayer {
         
         // Add resize listener if auto-resize is enabled
         if (this.options.autoResize) {
-            window.addEventListener('resize', () => this.handleResize());
+            this.resizeHandler = () => this.handleResize();
+            window.addEventListener('resize', this.resizeHandler);
         }
     }
     
@@ -129,8 +130,9 @@ class ASCIIAnimationPlayer {
         // Get frame dimensions
         const lines = frame.split('\n');
         const frameWidth = Math.max(...lines.map(line => line.length));
+        const frameHeight = lines.length;
         
-        // Calculate available width (accounting for padding and borders)
+        // Calculate available space (accounting for padding and borders)
         const availableWidth = Math.floor((containerWidth - 40) / 6); // Approximate char width
         
         // If frame fits, return original
@@ -138,68 +140,96 @@ class ASCIIAnimationPlayer {
             return frame;
         }
         
-        // Resize by sampling width only (preserve aspect ratio)
+        // Calculate scale to fit width while maintaining aspect ratio
         const scale = availableWidth / frameWidth;
         const targetWidth = Math.floor(frameWidth * scale);
+        const targetHeight = Math.floor(frameHeight * scale);
         
+        // Resize both width and height proportionally
         const resizedLines = [];
-        for (const line of lines) {
-            if (!line) {
-                resizedLines.push('');
-                continue;
-            }
-            
-            let resizedLine = '';
-            for (let x = 0; x < targetWidth; x++) {
-                const sourceX = Math.floor(x / scale);
-                if (sourceX < line.length) {
-                    resizedLine += line[sourceX];
-                } else {
-                    resizedLine += ' ';
+        for (let y = 0; y < targetHeight; y++) {
+            const sourceY = Math.floor(y / scale);
+            if (sourceY < lines.length) {
+                const sourceLine = lines[sourceY];
+                let resizedLine = '';
+                
+                for (let x = 0; x < targetWidth; x++) {
+                    const sourceX = Math.floor(x / scale);
+                    if (sourceX < sourceLine.length) {
+                        resizedLine += sourceLine[sourceX];
+                    } else {
+                        resizedLine += ' ';
+                    }
                 }
+                resizedLines.push(resizedLine);
             }
-            resizedLines.push(resizedLine);
         }
         
         return resizedLines.join('\n');
     }
     
     handleResize() {
-        // Adjust font size based on container size
+        if (this.frames.length === 0) return;
+        
         const container = this.container;
         const containerWidth = container.clientWidth;
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
         
-        // Calculate optimal font size
-        let fontSize = 10;
-        if (containerWidth < 600) {
-            fontSize = 6;
-        } else if (containerWidth < 900) {
-            fontSize = 8;
-        } else if (containerWidth > 1200) {
-            fontSize = 12;
-        }
+        // Get original frame dimensions
+        const sampleFrame = this.frames[0];
+        const lines = sampleFrame.split('\n');
+        const frameWidth = Math.max(...lines.map(line => line.length));
+        const frameHeight = lines.length;
         
+        // Calculate font size based on character dimensions
+        // For monospace fonts, character width is roughly 0.6 times the font size
+        // Character height is roughly equal to the font size
+        const maxFontSizeForWidth = Math.floor((containerWidth * 0.95) / (frameWidth * 0.6));
+        const maxFontSizeForHeight = Math.floor((viewportHeight * 0.7) / (frameHeight * 0.9)); // 0.9 for line-height
+        
+        // Use the smaller value to ensure it fits
+        let fontSize = Math.min(maxFontSizeForWidth, maxFontSizeForHeight);
+        
+        // Set reasonable bounds based on viewport size
+        const minSize = Math.max(3, Math.floor(viewportWidth / 200));
+        const maxSize = Math.min(16, Math.floor(viewportWidth / 80));
+        fontSize = Math.max(minSize, Math.min(fontSize, maxSize));
+        
+        // Apply the calculated font size
         this.display.style.fontSize = fontSize + 'px';
+        this.display.style.lineHeight = '0.9';
         
         // Trigger frame redisplay
-        if (this.frames.length > 0) {
-            this.displayFrame();
-        }
+        this.displayFrame();
     }
     
     destroy() {
         this.pause();
-        if (this.options.autoResize) {
-            window.removeEventListener('resize', this.handleResize);
+        if (this.options.autoResize && this.resizeHandler) {
+            window.removeEventListener('resize', this.resizeHandler);
         }
-        this.container.removeChild(this.display);
+        if (this.display && this.container.contains(this.display)) {
+            this.container.removeChild(this.display);
+        }
     }
 }
 
-// Initialize animation when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize animation when DOM is ready or when navigating
+function initializeAnimation() {
     const animationContainer = document.getElementById('ascii-animation-container');
     if (animationContainer) {
+        // Clean up existing player if it exists
+        if (window.asciiPlayer) {
+            try {
+                window.asciiPlayer.destroy();
+            } catch (e) {
+                console.log('Player cleanup error:', e);
+            }
+            window.asciiPlayer = null;
+        }
+        
+        // Always create a new player
         const player = new ASCIIAnimationPlayer(animationContainer, {
             autoResize: true,
             loop: true
@@ -207,7 +237,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         player.loadAnimation('/assets/ascii-animation.json');
         
-        // Store player instance for potential cleanup
+        // Store player instance
         window.asciiPlayer = player;
     }
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', initializeAnimation);
+
+// Initialize when page becomes visible (for SPA-like navigation)
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        setTimeout(initializeAnimation, 100); // Small delay to ensure DOM is ready
+    }
 });
+
+// Initialize on page load (for direct navigation)
+window.addEventListener('load', initializeAnimation);
+
+// Initialize on focus (when returning to tab/page)
+window.addEventListener('focus', initializeAnimation);
