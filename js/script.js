@@ -153,6 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function initPageSpecificFeatures() {
         // Re-initialize job cycler if present
         initJobCycler();
+        if (window.renderAsciiArt) {
+            window.renderAsciiArt();
+        }
     }
     
     function initJobCycler() {

@@ -294,7 +294,7 @@ p {
 }
 
 /* New Typography for Individual Posts Only (exclude home page, posts listing, My Work) */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) p {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) p {
     font-family: 'PolySans New', var(--font-family-body);
     font-weight: 400;
     font-size: 1.125rem; /* 18px - smaller for better spacing */
@@ -305,12 +305,12 @@ p {
 }
 
 /* Add top spacing for individual blog posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) {
     margin-top: 17vh; /* 17% of viewport height - about 15-20% as requested */
 }
 
 /* Individual blog post styling only - exclude home page and posts listing */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h1 {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h1 {
     font-family: 'PerfectlyNineties New', var(--font-family-headers);
     font-weight: 300; /* Light weight */
     font-size: 4rem; /* Bigger main headline */
@@ -322,8 +322,8 @@ p {
 }
 
 /* Post Subtitles (H2 immediately following H1) - individual posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h1 + h2,
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h2:nth-of-type(1) {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h1 + h2,
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h2:nth-of-type(1) {
     font-family: 'PerfectlyNineties New', var(--font-family-headers);
     font-weight: 200; /* Extralight for subtitle */
     font-size: 2.5rem; /* Much bigger subtitle, but still smaller than main */
@@ -335,7 +335,7 @@ p {
 }
 
 /* Regular H2s (not subtitles) - individual posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h2:not(:nth-of-type(1)):not(h1 + h2) {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h2:not(:nth-of-type(1)):not(h1 + h2) {
     font-family: 'PerfectlyNineties New', var(--font-family-headers);
     font-weight: 400; /* Regular weight */
     font-size: 2rem;
@@ -346,7 +346,7 @@ p {
     margin-bottom: 0.75rem;
 }
 
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h3 {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h3 {
     font-family: 'PerfectlyNineties New', var(--font-family-headers);
     font-weight: 300; /* Light weight */
     font-size: 1.5rem;
@@ -357,9 +357,9 @@ p {
     margin-bottom: 0.5rem;
 }
 
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h4,
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h5,
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h6 {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h4,
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h5,
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h6 {
     font-family: 'PolySans New', var(--font-family-body);
     font-weight: 600;
     font-size: 1.25rem;
@@ -396,8 +396,8 @@ ul, ol {
 }
 
 /* New list styling for individual posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) ul,
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) ol {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) ul,
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) ol {
     font-family: 'PolySans New', var(--font-family-body);
     font-weight: 400;
     font-size: 1.125rem; /* 18px - matching paragraph text */
@@ -408,11 +408,11 @@ ul, ol {
     padding-left: 1.5rem; /* reduced from 2rem */
 }
 
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) li {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) li {
     margin-bottom: 0.25rem; /* tighter list item spacing */
 }
 
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) li:last-child {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) li:last-child {
     margin-bottom: 0;
 }
 
@@ -978,62 +978,61 @@ html.dark-mode .site-logo:hover {
     font-size: 14px;
 }
 
-/* ASCII Animation Styles */
-.ascii-animation-container {
-    width: 100%;
+/* Static ASCII Art */
+.ascii-art-container {
     margin: 0 auto 2rem auto;
-    padding: 0;
-    display: block;
-    overflow: visible;
-    background: none;
-    border: none;
-    box-shadow: none;
+    text-align: center;
+    max-width: var(--layout-max-width); /* Match main content width */
+    /* overflow-x is removed, JS will handle sizing */
 }
 
-.ascii-animation-display {
-    font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-    font-size: 10px;
-    line-height: 0.9;
-    margin: 0;
-    padding: 0;
-    background: none;
+div.ascii-art-container > pre.ascii-art {
+    font-family: 'AlmaMono', monospace !important; /* Use a font that is actually loaded */
     color: var(--color-text-primary);
     white-space: pre;
-    text-align: left;
-    border: none;
-    box-shadow: none;
-    transition: color 0.3s ease;
-    display: block;
-    text-shadow: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.2 !important; /* User can tweak this value (e.g., 1.1 to 1.3) to adjust vertical spacing */
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: inline-block;
+    /* Font size is set by JS */
 }
 
 @media (max-width: 900px) {
-    .ascii-animation-container {
+    .ascii-art-container {
         margin: 0 0 1rem 0;
     }
 }
 
 @media (max-width: 600px) {
-    .ascii-animation-container {
+    .ascii-art-container {
         margin: 0 0 0.5rem 0;
     }
     
+    /* font-size is now dynamic, so this is no longer needed */
+    /*
+    .ascii-art {
+        font-size: 3px; 
+    }
+    */
+    
     /* Reduce top spacing on mobile */
-    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) {
+    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) {
         margin-top: 10vh; /* Less spacing on mobile */
     }
     
     /* Responsive post headlines */
-    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h1 {
+    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h1 {
         font-size: 3rem; /* Bigger on mobile too */
         letter-spacing: -1px;
         margin-bottom: 0.25rem;
     }
     
-    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h1 + h2,
-    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) h2:nth-of-type(1) {
+    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h1 + h2,
+    .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) h2:nth-of-type(1) {
         font-size: 1.75rem; /* Bigger subtitle on mobile */
         letter-spacing: -0.5px;
         margin-bottom: 2rem;
@@ -1055,7 +1054,7 @@ code {
 }
 
 /* New mono font for code blocks in individual posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) code {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) code {
     font-family: 'TX-02 Mono', 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
     font-weight: 400;
     font-variation-settings: 'wght' 400;
@@ -1086,13 +1085,13 @@ pre {
 }
 
 /* New mono font for pre blocks in individual posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) pre {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) pre {
     font-family: 'TX-02 Mono', 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
     font-weight: 400;
     font-variation-settings: 'wght' 400;
 }
 
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) pre[class*="language-"] {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) pre[class*="language-"] {
     font-family: 'TX-02 Mono', 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
     font-weight: 400;
     font-variation-settings: 'wght' 400;
@@ -1276,7 +1275,7 @@ blockquote p {
 }
 
 /* Enhanced blockquotes for posts only */
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) blockquote {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) blockquote {
     font-family: 'PerfectlyNineties New', var(--font-family-headers);
     font-weight: 200; /* Extralight weight */
     font-style: italic;
@@ -1287,7 +1286,7 @@ blockquote p {
     border: 1px solid var(--color-pre-border) !important; /* Match code block border */
 }
 
-.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-animation-container)) blockquote p {
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) blockquote p {
     font-family: inherit;
     font-weight: inherit;
     font-style: inherit;

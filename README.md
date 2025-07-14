@@ -219,3 +219,19 @@ MIT License - see LICENSE file for details.
 ## Support
 
 For questions or issues, please open an issue on the repository or contact [your-email@example.com].
+
+## ASCII Media Component
+
+You can embed responsive ASCII art anywhere using the reusable component.
+
+1. Include the partial in your markdown / template:
+
+```liquid
+{% include "partials/ascii-media.liquid", src: "/assets/boat.txt" %}
+```
+
+2. Place the ASCII file in `assets` (or supply any public path).
+
+The JavaScript (`js/ascii.js`) automatically scans for every `.ascii-art-container`, fetches the art, and fits it to the container width. It also re-runs after SPA navigation.
+
+CSS is already configured globally. If you need vertical spacing tweak, adjust `line-height` in `.ascii-art` rule inside `css/style.css`.

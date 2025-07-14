@@ -1,3 +1,18 @@
+### 2025-07-14 00:39
+Fixed persistent ASCII art overflow. Root cause was a font specified in CSS but never loaded. Switched to an existing font ('AlmaMono'), increased CSS selector specificity, and added a pixel-based safety margin to the JS calculation.
+
+### 2025-07-14 00:26
+Patched ASCII art component. Fixed font-loading race condition in JS for accurate sizing. Adjusted CSS line-height to prevent character overlap. The component is now stable and correctly rendered.
+
+### 2025-07-14 00:22
+Finalized ASCII art component. Adjusted line-height for normal spacing and implemented a more precise JavaScript width calculation to ensure it matches the main content body's width perfectly.
+
+### 2025-07-14 00:20
+Fixed unresponsive ASCII art. Implemented aggressive CSS reset to prevent style inheritance, and refactored Javascript to dynamically calculate character aspect ratio for precise, responsive font-sizing.
+
+### 2025-07-14 00:18
+Replaced the failed ASCII animation with a new, flexible static ASCII art component. The new implementation dynamically adjusts the font size of the ASCII art to fit the width of the content area, ensuring it's responsive and feels integrated into the page. This was achieved by creating a new dedicated JavaScript file (js/ascii.js), updating the CSS to be more flexible, and cleaning up old/unused code.
+
 ### 2025-07-07 16:51
 ✅ Committed and pushed SEO description updates (d8ce4dd) - improved site metadata
 

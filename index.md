@@ -3,7 +3,9 @@ layout: layout.liquid
 title: Home
 ---
 
-<div id="ascii-animation-container" class="ascii-animation-container"></div>
+<div class="ascii-art-container">
+<pre class="ascii-art"></pre>
+</div>
 
 # welcome
 
