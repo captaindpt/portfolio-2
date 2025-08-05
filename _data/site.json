@@ -91,6 +91,14 @@
   ],
   "side_projects": [
     {
+      "name": "YouTube Semantic Search (yt-aperture)",
+      "description": "Python tool for extracting YouTube subtitles and performing semantic search over video content using sentence transformer models. Features intelligent chunking, embedding cache, and AI-optimized workflows for Claude Code integration.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/your-org/yt-aperture",
+      "technologies": ["Python", "yt-dlp", "sentence-transformers", "scikit-learn", "PyTorch", "CLI"],
+      "date": "2025-08-01"
+    },
+    {
       "name": "wispr",
       "description": "Production-grade voice-to-text system for macOS using Fn key as global trigger. Features native Cocoa integration, real-time AssemblyAI streaming, background service architecture, and robust error handling. Built as Wispr Flow alternative.",
       "logo": "/assets/logo.png",
@@ -137,6 +145,14 @@
       "url": "https://x.com/JoinCrescentia",
       "technologies": ["Community Building", "Event Management", "Leadership", "Networking"],
       "date": "2024-11-01"
+    },
+    {
+      "name": "Calendar++",
+      "description": "Experimental calendar system built with structured output and chain of thought reasoning for LMS integration. Early exploration of AI-native calendar interfaces before structured output became mainstream.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/calendarplusplus",
+      "technologies": ["Structured Output", "Chain of Thought", "LMS Integration", "AI-Native UI"],
+      "date": "2024-07-01"
     },
     {
       "name": "mnist-from-scratch",
