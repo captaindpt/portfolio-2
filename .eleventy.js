@@ -1,14 +1,19 @@
 module.exports = function(eleventyConfig) {
+  // Ignore POSTS-INSTRUCTIONS.md from build
+  eleventyConfig.ignores.add("posts/POSTS-INSTRUCTIONS.md");
+  
   // Copy static assets
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("js");
 
-  // Create posts collection
+  // Create posts collection (exclude POSTS-INSTRUCTIONS.md)
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("posts/*.md").sort((a, b) => {
-      return new Date(b.date) - new Date(a.date); // Sort by date, newest first
-    });
+    return collectionApi.getFilteredByGlob("posts/*.md")
+      .filter(post => !post.inputPath.includes('POSTS-INSTRUCTIONS.md'))
+      .sort((a, b) => {
+        return new Date(b.date) - new Date(a.date); // Sort by date, newest first
+      });
   });
 
   // Add date filter for formatting

@@ -7,10 +7,9 @@ title: Home
 <pre class="ascii-art"></pre>
 </div>
 
-# welcome
+# welcome to my corner of the internet
 
-i make things. paintings, songs, communities, robots, and now, artificial brains.
-currently i am:
+my name's Mani and i've always been making things. paintings, beats, msotly software, and sometimes robots. currently i am:
 - trying to finish my degree at uofg<hyperlink> in Systems Engineering and Computing
 - doing research and working with my uni's IT dept to explore application with LLMs and other AI technologies
 * building Arboros, a community built to provide a space for creatives to share their work and collaborate on projects.

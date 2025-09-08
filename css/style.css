@@ -393,6 +393,18 @@ ul, ol {
     margin-top: var(--spacing-text-top);
     margin-bottom: 0;
     padding-left: var(--spacing-lg);
+    list-style: none; /* Remove default bullets */
+}
+
+/* Asterisk bullet points for general content (excluding my works) */
+.main-content article:not(:has(.work-container)) ul li::before {
+    content: "*";
+    color: var(--color-text-primary);
+    font-weight: normal;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
 }
 
 /* New list styling for individual posts only */
@@ -406,6 +418,18 @@ ul, ol {
     margin-top: 1rem; /* reduced spacing */
     margin-bottom: 0;
     padding-left: 1.5rem; /* reduced from 2rem */
+    list-style: none; /* Remove default bullets */
+}
+
+/* Asterisk bullet points for posts and regular markdown */
+.main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) ul li::before {
+    content: "*";
+    color: var(--color-text-secondary);
+    font-weight: normal;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
 }
 
 .main-content article:not(:has(.work-container)):not(:has(.post-preview)):not(:has(.ascii-art-container)) li {
@@ -425,10 +449,22 @@ ul, ol {
     color: var(--color-text-primary);
     margin-top: var(--spacing-text-top);
     padding-left: var(--spacing-lg);
+    list-style: disc; /* Keep original bullet style for my works */
 }
 
 .main-content article:has(.work-container) li {
     margin-bottom: 0.5em;
+}
+
+/* Asterisk bullet points for post previews */
+.main-content article:not(:has(.work-container)) .post-preview ul li::before {
+    content: "*";
+    color: var(--color-text-primary);
+    font-weight: normal;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
 }
 
 li {

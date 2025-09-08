@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'construction worker',
             'painter', 
             'line cook',
-            'social media marketing',
+            'social media manager',
             'door to door salesman',
             'private tutor'
         ];

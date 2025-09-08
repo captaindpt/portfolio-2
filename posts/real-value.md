@@ -7,7 +7,7 @@ excerpt: "Human history doesn't accumulate but decays. The systems we create are
 ---
 
 # Real Value
-*comes with a half life*
+## comes with a half life
 
 Human history—or to be more inclusive, the history of life—does not accumulate but decays. Imagine the process of life as building a bridge while you're crossing it, but every step forward requires cannibalizing the planks behind you. The systems we (life) create (also life) aren't meant to last. They're meant to be extracted from at the end of their half-life, their bones becoming scaffolding for whatever comes next.
 
@@ -16,3 +16,5 @@ Universities once transferred knowledge; now they sell credentials. Social media
 This feels wrong the way a Ponzi scheme does, where every generation consumes the last one's achievements. But maybe that's just entropy wearing a suit. Maybe value was always temporary, and we've been lying to ourselves about permanence.
 
 The only real value might be in knowing when to extract and when to build. When to let the old system die and when to birth the new one from its corpse.
+
+-M
