@@ -1375,6 +1375,12 @@ blockquote p {
     color: var(--color-text-secondary);
 }
 
+/* Remove any unwanted p tag margins in post meta */
+.post-meta p {
+    margin: 0 !important;
+    display: inline;
+}
+
 .post-meta time {
     font-style: italic;
 }
