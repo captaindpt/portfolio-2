@@ -1,9 +1,9 @@
 ---
 layout: layout.liquid
-title: Control Systems and Mathematical Notation
+title: The Future
 date: 2025-07-09
-tags: ["engineering", "control-systems", "markdown"]
-excerpt: "Demonstrating mathematical notation in markdown posts using HTML subscripts and superscripts for control systems equations."
+tags: ["philosophy", "systems", "truth"]
+excerpt: "is weighted for truth"
 ---
 
 # The Future
