@@ -3,7 +3,7 @@ layout: layout.liquid
 title: Real Value
 date: 2025-09-08
 tags: ["philosophy", "systems", "entropy"]
-excerpt: "Human history doesn't accumulate but decays. The systems we create aren't meant to last—they're meant to be extracted from, their bones becoming scaffolding for whatever comes next."
+excerpt: "comes with a half life"
 ---
 
 # Real Value
