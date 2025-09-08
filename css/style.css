@@ -1331,8 +1331,8 @@ blockquote p {
 
 /* Posts Styling */
 .post-preview {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem; /* Reduced from 3rem */
+    padding-bottom: 1.5rem; /* Reduced from 2rem */
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -1341,7 +1341,7 @@ blockquote p {
 }
 
 .post-preview h2 {
-    margin-top: 0;
+    margin-top: 0 !important; /* Force override of general h2 top margin */
     margin-bottom: 0.5rem;
 }
 
