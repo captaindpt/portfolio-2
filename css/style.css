@@ -1331,6 +1331,7 @@ blockquote p {
 
 /* Posts Styling */
 .post-preview {
+    margin-top: 0 !important; /* Override general article margin */
     margin-bottom: 2rem; /* Reduced from 3rem */
     padding-bottom: 1.5rem; /* Reduced from 2rem */
     border-bottom: 1px solid var(--color-border);
