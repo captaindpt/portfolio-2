@@ -7,13 +7,16 @@ title: Home
 <pre class="ascii-art"></pre>
 </div>
 
-# welcome to my corner of the internet
+# hey, i'm mani
 
-my name's Mani and i've always been making things. paintings, beats, msotly software, and sometimes robots. currently i am:
-- trying to finish my degree at uofg<hyperlink> in Systems Engineering and Computing
-- doing research and working with my uni's IT dept to explore application with LLMs and other AI technologies
-* building Arboros, a community built to provide a space for creatives to share their work and collaborate on projects.
-* contributing to open source projects in the AI/ML space
+i make things. paintings, beats, software, sometimes robots—whatever the medium, i've always been building.
+
+my goal is to develop technology that enables me and others to make anything we want.
+
+right now i'm:
+- finishing my engineering degree at uofg
+- doing AI/ML research to understand how these tools can expand what's possible to create
+- building arboros, a community for creatives to share and collaborate
 
 
 
