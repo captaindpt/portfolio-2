@@ -31,7 +31,7 @@
       "featured": true
     },
     {
-      "name": "E-Commerce Platform", 
+      "name": "E-Commerce Platform",
       "description": "Full-stack web application with payment integration and inventory management.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/yourname/ecommerce",
@@ -40,7 +40,7 @@
     {
       "name": "Data Visualization Tool",
       "description": "Interactive dashboard for analyzing complex datasets with D3.js and Python backend.",
-      "logo": "/assets/logo.png", 
+      "logo": "/assets/logo.png",
       "url": "https://github.com/yourname/dataviz",
       "featured": true
     },
@@ -68,25 +68,67 @@
   ],
   "experience": [
     {
+      "title": "Systems Engineer",
+      "company": "Flowdraulics",
+      "period": "Jan 2026 - Present",
+      "description": "Developing embedded systems and programming microcontrollers for hydraulic equipment. Working with Danfoss components and building automation solutions to streamline engineering workflows.",
+      "technologies": [
+        "Embedded Systems",
+        "Microcontrollers",
+        "Danfoss",
+        "Hydraulics",
+        "Automation"
+      ]
+    },
+    {
+      "title": "Research Engineer",
+      "company": "University of Guelph - Prof. Gharabaghi",
+      "period": "Sep 2025 - Present",
+      "description": "Designing, assembling, and deploying infrastructure sensor units for environmental data collection. Building monitoring systems to measure salt levels across municipalities for water quality research.",
+      "technologies": [
+        "Sensor Systems",
+        "Data Collection",
+        "Hardware Assembly",
+        "Environmental Monitoring",
+        "Field Deployment"
+      ]
+    },
+    {
       "title": "Research Assistant - Generative AI in IT Services",
       "company": "University of Guelph",
       "period": "Mar 2025 - Aug 2025",
       "description": "Conducted research on the application of generative AI technologies in IT service management and operations. Explored machine learning models for automated incident resolution and service optimization.",
-      "technologies": ["Generative AI", "Machine Learning", "Python", "Research Methods"]
+      "technologies": [
+        "Generative AI",
+        "Machine Learning",
+        "Python",
+        "Research Methods"
+      ]
     },
     {
       "title": "Network Infrastructure Student Technician",
       "company": "University of Guelph",
       "period": "May 2024 - Aug 2024",
       "description": "Performed campus-wide Wi-Fi surveys to improve internet coverage in dense student environments. Collaborated with team members for efficient network repairs and troubleshooting. Gained hands-on experience in Cisco environment and assisted in migrating databases into NetBox for unified network source of truth.",
-      "technologies": ["Cisco", "NetBox", "Wi-Fi Systems", "Network Troubleshooting", "Database Migration"]
+      "technologies": [
+        "Cisco",
+        "NetBox",
+        "Wi-Fi Systems",
+        "Network Troubleshooting",
+        "Database Migration"
+      ]
     },
     {
       "title": "Information Technology Administrator",
       "company": "Zamand International Shipping and Transport Co.",
       "period": "Sep 2019 - Nov 2021",
       "description": "Managed IT infrastructure and systems for international shipping operations. Administered network systems, maintained databases, and provided technical support for logistics operations across multiple locations.",
-      "technologies": ["System Administration", "Network Management", "Database Administration", "IT Support"]
+      "technologies": [
+        "System Administration",
+        "Network Management",
+        "Database Administration",
+        "IT Support"
+      ]
     }
   ],
   "side_projects": [
@@ -95,7 +137,14 @@
       "description": "Python tool for extracting YouTube subtitles and performing semantic search over video content using sentence transformer models. Features intelligent chunking, embedding cache, and AI-optimized workflows for Claude Code integration.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/your-org/yt-aperture",
-      "technologies": ["Python", "yt-dlp", "sentence-transformers", "scikit-learn", "PyTorch", "CLI"],
+      "technologies": [
+        "Python",
+        "yt-dlp",
+        "sentence-transformers",
+        "scikit-learn",
+        "PyTorch",
+        "CLI"
+      ],
       "date": "2025-08-01"
     },
     {
@@ -103,7 +152,14 @@
       "description": "Production-grade voice-to-text system for macOS using Fn key as global trigger. Features native Cocoa integration, real-time AssemblyAI streaming, background service architecture, and robust error handling. Built as Wispr Flow alternative.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/wispr",
-      "technologies": ["Python", "macOS Cocoa", "AssemblyAI", "WebSocket", "PyAudio", "launchd"],
+      "technologies": [
+        "Python",
+        "macOS Cocoa",
+        "AssemblyAI",
+        "WebSocket",
+        "PyAudio",
+        "launchd"
+      ],
       "date": "2025-06-01"
     },
     {
@@ -111,7 +167,14 @@
       "description": "Novel AI architecture enabling LLMs to make irreversible internal commitments and maintain consistent identity. Implements variational latent commitment vectors, QLoRA training, and mathematical framework for AI consciousness research.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/sorya/tree/main",
-      "technologies": ["PyTorch", "QLoRA", "Llama-2", "CUDA", "Variational Inference", "RLHF"],
+      "technologies": [
+        "PyTorch",
+        "QLoRA",
+        "Llama-2",
+        "CUDA",
+        "Variational Inference",
+        "RLHF"
+      ],
       "date": "2025-05-15"
     },
     {
@@ -119,7 +182,15 @@
       "description": "Experimental framework for improving AI systems by tracking attention patterns. Built logging SDK, RAG integration, and evaluation tools showing attention-weighted re-ranking can improve Precision@5 from ~0.75 to ~0.87.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/aep",
-      "technologies": ["Python", "LangChain", "OpenAI", "FAISS", "FastAPI", "React", "RAG"],
+      "technologies": [
+        "Python",
+        "LangChain",
+        "OpenAI",
+        "FAISS",
+        "FastAPI",
+        "React",
+        "RAG"
+      ],
       "date": "2025-05-01"
     },
     {
@@ -135,7 +206,13 @@
       "description": "Open source contribution to Apple-native tools for Model Context Protocol. Implemented comprehensive email functionality including multi-recipient support, attachments, scheduling, and search capabilities. Project has 2k+ GitHub stars.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/supermemoryai/apple-mcp",
-      "technologies": ["TypeScript", "AppleScript", "MCP", "Email APIs", "Open Source"],
+      "technologies": [
+        "TypeScript",
+        "AppleScript",
+        "MCP",
+        "Email APIs",
+        "Open Source"
+      ],
       "date": "2024-12-01"
     },
     {
@@ -143,7 +220,12 @@
       "description": "Community event series (previously Crescentia) inspired by Socratica, hosting weekly work sessions where creatives, enthusiasts, and professionals gather for collaborative productivity and networking.",
       "logo": "/assets/logo.png",
       "url": "https://x.com/JoinCrescentia",
-      "technologies": ["Community Building", "Event Management", "Leadership", "Networking"],
+      "technologies": [
+        "Community Building",
+        "Event Management",
+        "Leadership",
+        "Networking"
+      ],
       "date": "2024-11-01"
     },
     {
@@ -151,7 +233,12 @@
       "description": "Experimental calendar system built with structured output and chain of thought reasoning for LMS integration. Early exploration of AI-native calendar interfaces before structured output became mainstream.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/calendarplusplus",
-      "technologies": ["Structured Output", "Chain of Thought", "LMS Integration", "AI-Native UI"],
+      "technologies": [
+        "Structured Output",
+        "Chain of Thought",
+        "LMS Integration",
+        "AI-Native UI"
+      ],
       "date": "2024-07-01"
     },
     {
