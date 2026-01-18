@@ -28,7 +28,6 @@ not in a particular order:
 - **internal tools at my university's IT department** — automation tools to streamline workflows
 - **truth terminal** — a bloomberg-style workspace for polymarket and emerging prediction markets
 - **ccs aperture** — a semantic search tool, like my own notebook LM for youtube and books
-- **screen gameplay** — gameplay screen capture and analysis
 
 
 ## things i'm building now
