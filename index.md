@@ -19,6 +19,23 @@ right now i'm:
 - building arboros, a community for creatives to share and collaborate
 
 
+## things i've made
+
+not in a particular order:
+
+- **a lot of websites** — various web projects and portfolio sites
+- **a bunch of robots** — hardware projects combining software and mechanical design
+- **internal tools at my university's IT department** — automation tools to streamline workflows
+- **truth terminal** — a bloomberg-style workspace for polymarket and emerging prediction markets
+- **ccs aperture** — a semantic search tool, like my own notebook LM for youtube and books
+- **screen gameplay** — gameplay screen capture and analysis
+
+
+## things i'm building now
+
+- **full CRM suite and automation tools** — for a pickleball club in kitchener, handling member management and operations
+- **LLM automation endpoints for cadence virtuoso** — integrating language models with EDA tooling
+
 
 ## get in touch
 
