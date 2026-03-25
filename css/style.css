@@ -1480,6 +1480,64 @@ a:hover {
     transition: all 0.2s ease;
 }
 
+/* Homepage Zones */
+.home-thesis {
+    font-family: var(--font-family-light) !important;
+    font-size: 1.35rem !important;
+    line-height: 1.5 !important;
+    color: var(--color-text-primary) !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2.5rem !important;
+    max-width: 540px;
+}
+
+.home-status {
+    font-family: 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-tech-tag-bg);
+    margin-top: 0;
+    margin-bottom: 3rem;
+    max-width: 540px;
+}
+
+.home-status-prefix {
+    color: var(--color-text-primary);
+    font-weight: 700;
+    user-select: none;
+}
+
+.home-status a {
+    color: var(--color-text-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.home-status a:hover {
+    color: var(--color-accent-red);
+}
+
+.home-details {
+    font-family: var(--font-family-light) !important;
+    font-size: 0.875rem !important;
+    color: var(--color-text-secondary) !important;
+    letter-spacing: 0.01em;
+    margin-top: 0 !important;
+}
+
+.home-details a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+.home-details a:hover {
+    color: var(--color-text-primary);
+}
+
 /* Status Tags */
 .status-tag {
     display: inline-block;
