@@ -15,7 +15,7 @@ right now my main thing is [analog-gradients](https://github.com/captaindpt/torc
 
 i also build AI-powered tools that reverse-engineer undocumented systems into searchable knowledge. i've done this across industrial control systems (proprietary binary formats at [flodraulic](https://flodraulic.com)), university IT infrastructure (RAG pipelines and MCP servers at uofg), and government/institutional sensor data.
 
-i'm finishing my engineering degree at the university of guelph, consulting for a [startup in san francisco](https://firstprinciplesresearch.com), and running a co-op at a hydraulics company where i proposed and am driving their long-term AI strategy.
+i'm finishing my engineering degree at the university of guelph, consulting for a startup in san francisco, and running a co-op at a hydraulics company where i proposed and am driving their long-term AI strategy.
 
 long-term i'm interested in compute sovereignty — making chip design accessible so intelligence infrastructure is distributed, not centralized. the tools to build silicon shouldn't be locked behind billion-dollar licenses and decade-long learning curves.
 
