@@ -13,7 +13,7 @@ i build systems that turn chaos into structure.
 
 right now my main thing is [analog-gradients](https://github.com/captaindpt/torch2rtl) — an autonomous chip design exploration platform that takes a PyTorch model and produces silicon-grade timing, area, and power metrics in ~11 minutes. LLM agents orchestrate commercial EDA tools end to end. it's the first feedback loop between ML model design and physical silicon.
 
-i also build AI-powered tools that reverse-engineer undocumented systems into searchable knowledge. i've done this across industrial control systems (danfoss binary formats at [flodraulic](https://flodraulic.com)), university IT infrastructure (RAG pipelines and MCP servers at uofg), and government/institutional sensor data.
+i also build AI-powered tools that reverse-engineer undocumented systems into searchable knowledge. i've done this across industrial control systems (proprietary binary formats at [flodraulic](https://flodraulic.com)), university IT infrastructure (RAG pipelines and MCP servers at uofg), and government/institutional sensor data.
 
 i'm finishing my engineering degree at the university of guelph, consulting for a [startup in san francisco](https://firstprinciplesresearch.com), and running a co-op at a hydraulics company where i proposed and am driving their long-term AI strategy.
 
@@ -31,7 +31,7 @@ autonomous chip design exploration platform. LLM agents orchestrate commercial E
 [torch2rtl](https://github.com/captaindpt/torch2rtl) · [eda-pilot](https://github.com/captaindpt/eda-pilot)
 
 **p1p-observer** <span class="status-tag status-active">[active]</span>
-reverse-engineered Danfoss's proprietary P1P binary file format with zero existing documentation. parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. turns opaque industrial control data into natural-language-searchable documentation. *(closed source — IP retained under co-op agreement)*
+reverse-engineered a proprietary binary file format used in industrial control systems, with zero existing documentation. parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. turns opaque industrial control data into natural-language-searchable documentation. *(closed source — IP retained under co-op agreement)*
 
 </div>
 

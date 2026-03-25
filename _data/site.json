@@ -84,12 +84,11 @@
       "title": "Systems Engineer Co-op",
       "company": "Flodraulic Systems Inc.",
       "period": "Jan 2026 - Present",
-      "description": "Proposed company's AI strategy and built automated extraction pipeline that reverse-engineers Danfoss proprietary binary formats into structured, queryable knowledge. Parsed and structured 85+ binary record types, reconstructing page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks from formats with zero existing documentation. Turning undocumented industrial control data into natural-language-searchable documentation.",
+      "description": "Proposed company's AI strategy and built automated extraction pipeline that reverse-engineers proprietary binary formats into structured, queryable knowledge. Parsed and structured 85+ binary record types, reconstructing page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks from formats with zero existing documentation. Turning undocumented industrial control data into natural-language-searchable documentation.",
       "technologies": [
         "Python",
         "NLP",
         "Binary Reverse Engineering",
-        "Danfoss",
         "AI Strategy",
         "Knowledge Systems"
       ]
@@ -168,14 +167,13 @@
     },
     {
       "name": "p1p-observer",
-      "description": "Reverse-engineered Danfoss's proprietary P1P binary file format with zero existing documentation. Parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. Turns opaque industrial control data into natural-language-searchable documentation.",
+      "description": "Reverse-engineered a proprietary binary file format with zero existing documentation. Parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. Turns opaque industrial control data into natural-language-searchable documentation.",
       "logo": "/assets/logo.png",
       "url": "#",
       "technologies": [
         "Python",
         "Binary Reverse Engineering",
         "NLP",
-        "Danfoss",
         "Knowledge Systems"
       ],
       "date": "2026-01-15",
