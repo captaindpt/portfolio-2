@@ -11,13 +11,13 @@ title: Home
 
 i build systems that turn chaos into structure.
 
-right now my main thing is [analog-gradients](https://github.com/captaindpt/torch2rtl) — an autonomous chip design exploration platform that takes a PyTorch model and produces silicon-grade timing, area, and power metrics in ~11 minutes. LLM agents orchestrate commercial EDA tools end to end. it's the first feedback loop between ML model design and physical silicon.
+right now my main thing is [analog-gradients](https://github.com/captaindpt/torch2rtl) - an autonomous chip design exploration platform that takes a PyTorch model and produces silicon-grade timing, area, and power metrics in ~11 minutes. LLM agents orchestrate commercial EDA tools end to end. it's the first feedback loop between ML model design and physical silicon.
 
 i also build AI-powered tools that reverse-engineer undocumented systems into searchable knowledge. i've done this across industrial control systems (proprietary binary formats at [flodraulic](https://flodraulic.com)), university IT infrastructure (RAG pipelines and MCP servers at uofg), and government/institutional sensor data.
 
 i'm finishing my engineering degree at the university of guelph, consulting for a startup in san francisco, and running a co-op at a hydraulics company where i proposed and am driving their long-term AI strategy.
 
-long-term i'm interested in compute sovereignty — making chip design accessible so intelligence infrastructure is distributed, not centralized. the tools to build silicon shouldn't be locked behind billion-dollar licenses and decade-long learning curves.
+long-term i'm interested in compute sovereignty - making chip design accessible so intelligence infrastructure is distributed, not centralized. the tools to build silicon shouldn't be locked behind billion-dollar licenses and decade-long learning curves.
 
 
 ## selected work
@@ -31,7 +31,7 @@ autonomous chip design exploration platform. LLM agents orchestrate commercial E
 [torch2rtl](https://github.com/captaindpt/torch2rtl) · [eda-pilot](https://github.com/captaindpt/eda-pilot)
 
 **p1p-observer** <span class="status-tag status-active">[active]</span>
-reverse-engineered a proprietary binary file format used in industrial control systems, with zero existing documentation. parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. turns opaque industrial control data into natural-language-searchable documentation. *(closed source — IP retained under co-op agreement)*
+reverse-engineered a proprietary binary file format used in industrial control systems, with zero existing documentation. parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. turns opaque industrial control data into natural-language-searchable documentation. *(closed source - IP retained under co-op agreement)*
 
 </div>
 
@@ -58,19 +58,19 @@ contributed to agent framework and UI in [Zed](https://github.com/zed-industries
 <details class="archive-details">
 <summary>earlier projects</summary>
 
-- **truth terminal** — a bloomberg-style workspace for polymarket and emerging prediction markets
-- **ccs aperture** — a semantic search tool, like my own notebook LM for youtube and books
-- **[wispr](https://github.com/captaindpt/wispr)** — production-grade voice-to-text system for macOS using Fn key as global trigger
-- **[sorya](https://github.com/captaindpt/sorya/tree/main)** — novel AI architecture enabling LLMs to make irreversible internal commitments
-- **[AEP](https://github.com/captaindpt/aep)** — attention event protocol for improving AI systems by tracking attention patterns
-- **[the box](https://github.com/theboxproject)** — RFID-enhanced physical item tracker with Arduino + PWA
-- **[calendar++](https://github.com/captaindpt/calendarplusplus)** — experimental AI-native calendar system
-- **[mnist-from-scratch](https://github.com/captaindpt/mnist-from-scratch)** — neural network from scratch in Python
-- **[typing-game](https://github.com/captaindpt/typing-game)** — React typing speed test
-- **[cinefile](https://github.com/captaindpt/CineFile)** — movie archive assistant with IMDb API
-- **a lot of websites** — various web projects and portfolio sites
-- **a bunch of robots** — hardware projects combining software and mechanical design
-- **arboro** — community event series for creatives, previously crescentia
+- **truth terminal** - a bloomberg-style workspace for polymarket and emerging prediction markets
+- **ccs aperture** - a semantic search tool, like my own notebook LM for youtube and books
+- **[wispr](https://github.com/captaindpt/wispr)** - production-grade voice-to-text system for macOS using Fn key as global trigger
+- **[sorya](https://github.com/captaindpt/sorya/tree/main)** - novel AI architecture enabling LLMs to make irreversible internal commitments
+- **[AEP](https://github.com/captaindpt/aep)** - attention event protocol for improving AI systems by tracking attention patterns
+- **[the box](https://github.com/theboxproject)** - RFID-enhanced physical item tracker with Arduino + PWA
+- **[calendar++](https://github.com/captaindpt/calendarplusplus)** - experimental AI-native calendar system
+- **[mnist-from-scratch](https://github.com/captaindpt/mnist-from-scratch)** - neural network from scratch in Python
+- **[typing-game](https://github.com/captaindpt/typing-game)** - React typing speed test
+- **[cinefile](https://github.com/captaindpt/CineFile)** - movie archive assistant with IMDb API
+- **a lot of websites** - various web projects and portfolio sites
+- **a bunch of robots** - hardware projects combining software and mechanical design
+- **arboro** - community event series for creatives, previously crescentia
 
 </details>
 

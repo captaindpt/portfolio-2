@@ -20,11 +20,11 @@ i now view these systems as mirrors. they show us patterns in how we think, comm
 
 i'm particularly interested in the gaps; the places where these systems break down or surprise us. that's where the real learning happens. when an AI hallucinates, it reveals something about information processing. when it solves a problem elegantly, it shows us new ways to think about intelligence itself.
 
-my current focus is on the frontier between AI and physical systems. [analog-gradients](https://github.com/captaindpt/torch2rtl) is the embodiment of this — an autonomous chip design exploration platform that closes the loop from PyTorch to silicon-grade timing, area, and power metrics in about 11 minutes. the first feedback loop between ML model design and physical silicon.
+my current focus is on the frontier between AI and physical systems. [analog-gradients](https://github.com/captaindpt/torch2rtl) is the embodiment of this - an autonomous chip design exploration platform that closes the loop from PyTorch to silicon-grade timing, area, and power metrics in about 11 minutes. the first feedback loop between ML model design and physical silicon.
 
-we live in a world where most people can now leverage the cumulative knowledge of humanity to create. that changes everything. the tools aren't the bottleneck anymore — vision is. i want to build the workshops that let small teams do things that used to require institutions.
+we live in a world where most people can now leverage the cumulative knowledge of humanity to create. that changes everything. the tools aren't the bottleneck anymore - vision is. i want to build the workshops that let small teams do things that used to require institutions.
 
-i operate through [calibur labs](mailto:mani@caliburlabs.com). the long-term vision is compute sovereignty — chip design should be accessible enough that intelligence infrastructure is distributed rather than centralized.
+i operate through [calibur labs](mailto:mani@caliburlabs.com). the long-term vision is compute sovereignty - chip design should be accessible enough that intelligence infrastructure is distributed rather than centralized.
 
 this site is where i document the build in real time. some posts are technical, some philosophical, most are somewhere in between.
 
