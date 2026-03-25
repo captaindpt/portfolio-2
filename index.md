@@ -15,4 +15,8 @@ title: Home
 <span class="home-status-prefix">&gt;</span> currently: <a href="https://github.com/captaindpt/torch2rtl">analog-gradients</a> - autonomous chip design exploration. pytorch to silicon in ~11 minutes.
 </div>
 
-<p class="home-details">engineering systems & computing @ uofg · <a href="mailto:mani@caliburlabs.com">calibur labs</a> · <a href="mailto:mani@caliburlabs.com">mani@caliburlabs.com</a></p>
+<div class="home-details">
+<span>engineering systems & computing @ uofg</span>
+<span><a href="mailto:mani@caliburlabs.com">calibur labs</a></span>
+<span><a href="mailto:mani@caliburlabs.com">mani@caliburlabs.com</a></span>
+</div>

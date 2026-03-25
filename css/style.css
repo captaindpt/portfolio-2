@@ -1482,62 +1482,69 @@ a:hover {
 
 /* Homepage Zones */
 
-/* Zone 1: Thesis - the main statement, larger, full weight */
-.home-thesis {
+/* Zone 1: Thesis - the main statement */
+p.home-thesis {
     font-family: var(--font-family-light) !important;
-    font-size: 1.4rem !important;
-    line-height: 1.55 !important;
+    font-size: 1.35rem !important;
+    line-height: 1.6 !important;
     color: var(--color-text-primary) !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 3.5rem !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 3rem !important;
     max-width: 520px;
 }
 
-/* Zone 2: Status - monospaced terminal block, visually distinct */
-.home-status {
-    font-family: 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, monospace;
-    font-size: 0.8rem;
-    line-height: 1.7;
-    color: var(--color-text-secondary);
-    padding: 0.75rem 1rem 0.75rem 1.25rem;
-    border-left: 2px solid var(--color-border);
-    margin-top: 0;
-    margin-bottom: 4rem;
+/* Zone 2: Status - monospaced terminal output */
+div.home-status {
+    font-family: 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, monospace !important;
+    font-size: 0.75rem !important;
+    line-height: 1.7 !important;
+    color: var(--color-text-secondary) !important;
+    padding: 0.75rem 1rem 0.75rem 1rem !important;
+    border-left: 2px solid var(--color-border) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 4rem !important;
     max-width: 520px;
+    opacity: 0.7;
 }
 
-.home-status-prefix {
-    color: var(--color-text-secondary);
+div.home-status .home-status-prefix {
     user-select: none;
 }
 
-.home-status a {
-    color: var(--color-text-primary);
-    text-decoration: none;
+div.home-status a {
+    color: var(--color-text-primary) !important;
+    text-decoration: none !important;
 }
 
-.home-status a:hover {
-    color: var(--color-accent-red);
+div.home-status a:hover {
+    color: var(--color-accent-red) !important;
 }
 
-/* Zone 3: Credentials - small, muted, metadata feel */
-.home-details {
+/* Zone 3: Credentials - tiny, muted, stacked vertically */
+div.home-details {
     font-family: 'AlmaMono', 'JetBrains Mono', 'SF Mono', Monaco, monospace !important;
-    font-size: 0.75rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1.4 !important;
     color: var(--color-text-secondary) !important;
-    opacity: 0.6;
-    letter-spacing: 0.02em;
+    opacity: 0.45;
+    letter-spacing: 0.03em;
     margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
-.home-details a {
-    color: var(--color-text-secondary);
-    text-decoration: none;
+div.home-details a {
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
-.home-details a:hover {
-    color: var(--color-text-primary);
+div.home-details a:hover {
     opacity: 1;
+    color: var(--color-text-primary) !important;
 }
 
 /* Status Tags */
