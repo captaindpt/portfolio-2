@@ -20,11 +20,9 @@ i now view these systems as mirrors. they show us patterns in how we think, comm
 
 i'm particularly interested in the gaps; the places where these systems break down or surprise us. that's where the real learning happens. when an AI hallucinates, it reveals something about information processing. when it solves a problem elegantly, it shows us new ways to think about intelligence itself.
 
-but i'm past the tinkering phase. somewhere in the last year the work shifted from building small useful things to building infrastructure — systems that other systems run on top of.
+my current focus is on the frontier between AI and physical systems. [analog-gradients](https://github.com/captaindpt/torch2rtl) is the embodiment of this — an autonomous chip design exploration platform that closes the loop from PyTorch to silicon-grade timing, area, and power metrics in about 11 minutes. the first feedback loop between ML model design and physical silicon.
 
-[analog-gradients](https://github.com/captaindpt/torch2rtl) is the current embodiment of this. it's an autonomous chip design exploration platform — the first feedback loop between ML model design and physical silicon. not a small useful thing. a workshop that lets small teams do serious chip engineering without billion-dollar toolchains and decade-long learning curves. PyTorch model in, silicon PPA metrics out, ~11 minutes.
-
-i build workshops, not widgets. the goal is to build the tools that let other people build things that don't exist yet.
+we live in a world where most people can now leverage the cumulative knowledge of humanity to create. that changes everything. the tools aren't the bottleneck anymore — vision is. i want to build the workshops that let small teams do things that used to require institutions.
 
 some context that explains the intensity: i'm kurdish-iranian. i immigrated to canada three years ago. displacement and constraint compress into forward motion. i don't say this for sympathy — it's just the variable that explains why i move fast and build like the window might close.
 
