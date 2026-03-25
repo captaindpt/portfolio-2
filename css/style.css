@@ -189,9 +189,9 @@
   --work-container-side-margin: 12.5vw; /* Current: 1/8 of viewport width each side */
   
   /* Work Section Size Ratios (adjust these to change section sizes) */
-  --work-section-1-ratio: 0.40fr; /* Professional Experience - 40% */
-  --work-section-2-ratio: 0.35fr; /* Side Projects - 35% */
-  --work-section-3-ratio: 0.25fr; /* Everything Else - 25% */
+  --work-section-1-ratio: 0.35fr; /* Professional Experience - 35% */
+  --work-section-2-ratio: 0.42fr; /* Projects - 42% */
+  --work-section-3-ratio: 0.23fr; /* Everything Else - 23% */
   --work-divider-spacing: 0.8rem; /* Space between sections */
   
 }
@@ -892,14 +892,14 @@ html.dark-mode .site-logo:hover {
 .side-projects-grid {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 
 .side-project-card {
     background: var(--color-project-card-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1rem 1.25rem;
     margin-bottom: 1rem;
 }
 
@@ -909,9 +909,11 @@ html.dark-mode .site-logo:hover {
 
 .project-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-title {
@@ -919,6 +921,7 @@ html.dark-mode .site-logo:hover {
     font-family: var(--font-family-nav);
     font-size: var(--font-size-large);
     font-weight: 700;
+    min-width: 0;
 }
 
 .project-title a {
@@ -940,10 +943,10 @@ html.dark-mode .site-logo:hover {
 
 .project-description {
     font-family: var(--font-family-body);
-    font-size: var(--font-size-base);
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.4;
     color: var(--color-text-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Everything Else Section */
