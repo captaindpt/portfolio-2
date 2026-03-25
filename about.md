@@ -24,8 +24,6 @@ my current focus is on the frontier between AI and physical systems. [analog-gra
 
 we live in a world where most people can now leverage the cumulative knowledge of humanity to create. that changes everything. the tools aren't the bottleneck anymore — vision is. i want to build the workshops that let small teams do things that used to require institutions.
 
-some context that explains the intensity: i'm kurdish-iranian. i immigrated to canada three years ago. displacement and constraint compress into forward motion. i don't say this for sympathy — it's just the variable that explains why i move fast and build like the window might close.
-
 i operate through [calibur labs](mailto:mani@caliburlabs.com). the long-term vision is compute sovereignty — chip design should be accessible enough that intelligence infrastructure is distributed rather than centralized.
 
 this site is where i document the build in real time. some posts are technical, some philosophical, most are somewhere in between.
