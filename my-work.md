@@ -7,7 +7,7 @@ permalink: /my-work/
 <div class="work-container">
   <div class="work-section work-experience">
     <h2>Professional Experience</h2>
-    <p>My journey through various roles in technology, from IT administration to AI research. If you want a PDF copy of my resume, you can <a href="https://drive.google.com/file/d/1tFymABAQl-0r06U2AT83Jpexy8WlVKfI/view?usp=drive_link" target="_blank" rel="noopener noreferrer">get it here</a>.</p>
+    <p>My journey through various roles in technology, from IT administration to autonomous chip design. If you want a PDF copy of my resume, you can <a href="https://drive.google.com/file/d/1tFymABAQl-0r06U2AT83Jpexy8WlVKfI/view?usp=drive_link" target="_blank" rel="noopener noreferrer">get it here</a>.</p>
     <div class="experience-list">
       {%- for job in site.experience -%}
       <div class="experience-item">
@@ -27,10 +27,10 @@ permalink: /my-work/
       </div>
       {%- endfor -%}
     </div>
-    
+
     <div class="additional-experience">
       <p class="additional-experience-text">
-        I have also worked in the capacity of 
+        I have also worked in the capacity of
         <span class="job-cycler" id="job-cycler">construction worker</span>.
       </p>
     </div>
@@ -39,15 +39,22 @@ permalink: /my-work/
   <div class="work-divider"></div>
 
   <div class="work-section work-projects">
-    <h2>Side Projects & Experiments</h2>
-    <p>Personal projects and explorations in various technologies and domains.</p>
+    <h2>Projects & Experiments</h2>
+    <p>Research, side projects, and explorations across chip design, AI infrastructure, and tooling.</p>
     <div class="side-projects-grid">
       {%- assign sorted_projects = site.side_projects | sort: 'date' | reverse -%}
       {%- for project in sorted_projects -%}
-      <div class="side-project-card">
+      <div class="side-project-card {% if project.tier == 'flagship' %}flagship-card{% endif %}">
         <div class="project-header">
           <h3 class="project-title">
-            <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+            {%- if project.url == "#" -%}
+              {{ project.name }}
+            {%- else -%}
+              <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+            {%- endif -%}
+            {%- if project.status -%}
+            <span class="status-tag status-{{ project.status }}">{{ project.status }}</span>
+            {%- endif -%}
           </h3>
           {%- if project.date -%}
           <span class="project-date">{{ project.date | date: "%B %Y" }}</span>

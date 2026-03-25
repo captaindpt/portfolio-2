@@ -9,36 +9,77 @@ title: Home
 
 # hey, i'm mani
 
-i make things. paintings, beats, software, sometimes robots—whatever the medium, i've always been building.
+i build systems that turn chaos into structure.
 
-my goal is to develop technology that enables me and others to make anything we want.
+right now my main thing is [analog-gradients](https://github.com/captaindpt/torch2rtl) — an autonomous chip design exploration platform that takes a PyTorch model and produces silicon-grade timing, area, and power metrics in ~11 minutes. LLM agents orchestrate commercial EDA tools end to end. it's the first feedback loop between ML model design and physical silicon.
 
-right now i'm:
-- finishing my engineering degree at uofg
-- doing AI/ML research to understand how these tools can expand what's possible to create
-- building arboros, a community for creatives to share and collaborate
+i also build AI-powered tools that reverse-engineer undocumented systems into searchable knowledge. i've done this across industrial control systems (danfoss binary formats at [flodraulic](https://flodraulic.com)), university IT infrastructure (RAG pipelines and MCP servers at uofg), and government/institutional sensor data.
+
+i'm finishing my engineering degree at the university of guelph, consulting for a [startup in san francisco](https://firstprinciplesresearch.com), and running a co-op at a hydraulics company where i proposed and am driving their long-term AI strategy.
+
+long-term i'm interested in compute sovereignty — making chip design accessible so intelligence infrastructure is distributed, not centralized. the tools to build silicon shouldn't be locked behind billion-dollar licenses and decade-long learning curves.
 
 
-## things i've made
+## selected work
 
-not in a particular order:
+### flagship
 
-- **a lot of websites** — various web projects and portfolio sites
-- **a bunch of robots** — hardware projects combining software and mechanical design
-- **internal tools at my university's IT department** — automation tools to streamline workflows
+<div class="selected-work-flagship">
+
+**analog-gradients** <span class="status-tag status-active">[active]</span>
+autonomous chip design exploration platform. LLM agents orchestrate commercial EDA tools (Cadence Genus/Innovus, Synopsys PrimeTime, GPDK045 PDK). PyTorch model in, silicon PPA metrics out, ~11 minutes end to end. produced a working 4-lane SIMD GPU (320 params, int8 quantized, 25.8 kGE, 118 MHz, 0.6 mW). ran the lowRISC Ibex RISC-V core through 12 configurations matching published references within 1–15%. extended with analog neuromorphic research: coupled oscillator optimization over 24–52D parameter spaces using CMA-ES with 2,000+ Spectre simulations.
+[torch2rtl](https://github.com/captaindpt/torch2rtl) · [eda-pilot](https://github.com/captaindpt/eda-pilot)
+
+**p1p-observer** <span class="status-tag status-active">[active]</span>
+reverse-engineered Danfoss's proprietary P1P binary file format with zero existing documentation. parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. turns opaque industrial control data into natural-language-searchable documentation. *(closed source — IP retained under co-op agreement)*
+
+</div>
+
+### shipped
+
+<div class="selected-work-shipped">
+
+**uofg AI infrastructure** <span class="status-tag status-shipped">[shipped]</span>
+built three RAG ingestion pipelines parsing unstructured institutional data (SharePoint, Teams, FootPrints) into searchable knowledge bases. deployed on Azure Container Instances with Docker. built custom MCP servers integrating LLMs with university systems. implemented Azure AD-integrated access control with SpiceDB for department-specific AI assistants with granular permissions.
+
+**atlas network content engine** <span class="status-tag status-active">[ongoing]</span>
+full-stack content engine for First Principles Research, Inc. (san francisco). Supabase, Vercel, Anthropic/Grok APIs. serverless functions, PostgreSQL schema design, API integrations for automated content processing and delivery.
+
+**apple MCP** <span class="status-tag status-shipped">[shipped]</span>
+contributed Apple Mail integration to the [apple-mcp](https://github.com/supermemoryai/apple-mcp) open source project (3,000+ GitHub stars). email search, attachments, scheduling, and error recovery for Model Context Protocol.
+
+**zed IDE contributions** <span class="status-tag status-shipped">[shipped]</span>
+contributed to agent framework and UI in [Zed](https://github.com/zed-industries/zed/pull/29115) code editor. enhanced terminal-based agent observability for failure recovery. PR accepted.
+
+</div>
+
+### archive
+
+<details class="archive-details">
+<summary>earlier projects</summary>
+
 - **truth terminal** — a bloomberg-style workspace for polymarket and emerging prediction markets
 - **ccs aperture** — a semantic search tool, like my own notebook LM for youtube and books
+- **[wispr](https://github.com/captaindpt/wispr)** — production-grade voice-to-text system for macOS using Fn key as global trigger
+- **[sorya](https://github.com/captaindpt/sorya/tree/main)** — novel AI architecture enabling LLMs to make irreversible internal commitments
+- **[AEP](https://github.com/captaindpt/aep)** — attention event protocol for improving AI systems by tracking attention patterns
+- **[the box](https://github.com/theboxproject)** — RFID-enhanced physical item tracker with Arduino + PWA
+- **[calendar++](https://github.com/captaindpt/calendarplusplus)** — experimental AI-native calendar system
+- **[mnist-from-scratch](https://github.com/captaindpt/mnist-from-scratch)** — neural network from scratch in Python
+- **[typing-game](https://github.com/captaindpt/typing-game)** — React typing speed test
+- **[cinefile](https://github.com/captaindpt/CineFile)** — movie archive assistant with IMDb API
+- **a lot of websites** — various web projects and portfolio sites
+- **a bunch of robots** — hardware projects combining software and mechanical design
+- **arboro** — community event series for creatives, previously crescentia
 
-
-## things i'm building now
-
-- **full CRM suite and automation tools** — for a pickleball club in kitchener, handling member management and operations
-- **LLM automation endpoints for cadence virtuoso** — integrating language models with EDA tooling
+</details>
 
 
 ## get in touch
 
-you can reach me at [manirash94@gmail.com](mailto:manirash94@gmail.com).
+i operate through [calibur labs](mailto:mani@caliburlabs.com).
+
+you can reach me at [mani@caliburlabs.com](mailto:mani@caliburlabs.com).
 
 <div class="social-links">
   <a href="https://x.com/mafiajoeg" target="_blank" rel="noopener noreferrer" class="social-link">
@@ -65,5 +106,3 @@ you can reach me at [manirash94@gmail.com](mailto:manirash94@gmail.com).
     </svg>
   </a>
 </div>
-
-*This site is my digital space to document projects, share learnings, and connect with fellow builders.*

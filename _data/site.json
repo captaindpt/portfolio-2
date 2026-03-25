@@ -68,70 +68,120 @@
   ],
   "experience": [
     {
-      "title": "Systems Engineer",
-      "company": "Flodraulic",
+      "title": "Consulting Software Engineer",
+      "company": "First Principles Research, Inc.",
+      "period": "Mar 2026 - Present",
+      "description": "Building a content engine for Atlas Network using Supabase, Vercel, and Anthropic/Grok APIs for automated content processing and delivery. Designing full-stack architecture with serverless functions, PostgreSQL schema design, and API integrations for an early-stage product.",
+      "technologies": [
+        "Supabase",
+        "Vercel",
+        "Anthropic API",
+        "PostgreSQL",
+        "Serverless"
+      ]
+    },
+    {
+      "title": "Systems Engineer Co-op",
+      "company": "Flodraulic Systems Inc.",
       "period": "Jan 2026 - Present",
-      "description": "Developing embedded systems and programming microcontrollers for hydraulic equipment. Working with Danfoss components and building automation solutions to streamline engineering workflows.",
+      "description": "Proposed company's AI strategy and built automated extraction pipeline that reverse-engineers Danfoss proprietary binary formats into structured, queryable knowledge. Parsed and structured 85+ binary record types, reconstructing page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks from formats with zero existing documentation. Turning undocumented industrial control data into natural-language-searchable documentation.",
       "technologies": [
-        "Embedded Systems",
-        "Microcontrollers",
-        "Danfoss",
-        "Hydraulics",
-        "Automation"
-      ]
-    },
-    {
-      "title": "Research Engineer",
-      "company": "University of Guelph - Prof. Gharabaghi",
-      "period": "Sep 2025 - Present",
-      "description": "Designing, assembling, and deploying infrastructure sensor units for environmental data collection. Building monitoring systems to measure salt levels across municipalities for water quality research.",
-      "technologies": [
-        "Sensor Systems",
-        "Data Collection",
-        "Hardware Assembly",
-        "Environmental Monitoring",
-        "Field Deployment"
-      ]
-    },
-    {
-      "title": "Research Assistant - Generative AI in IT Services",
-      "company": "University of Guelph",
-      "period": "Mar 2025 - Aug 2025",
-      "description": "Conducted research on the application of generative AI technologies in IT service management and operations. Explored machine learning models for automated incident resolution and service optimization.",
-      "technologies": [
-        "Generative AI",
-        "Machine Learning",
         "Python",
-        "Research Methods"
+        "NLP",
+        "Binary Reverse Engineering",
+        "Danfoss",
+        "AI Strategy",
+        "Knowledge Systems"
       ]
     },
     {
-      "title": "Network Infrastructure Student Technician",
-      "company": "University of Guelph",
-      "period": "May 2024 - Aug 2024",
-      "description": "Performed campus-wide Wi-Fi surveys to improve internet coverage in dense student environments. Collaborated with team members for efficient network repairs and troubleshooting. Gained hands-on experience in Cisco environment and assisted in migrating databases into NetBox for unified network source of truth.",
+      "title": "Research Engineer - Municipal Data Infrastructure",
+      "company": "University of Guelph - Dr. Gharabaghi Research Group",
+      "period": "Sep 2025 - Present",
+      "description": "Building real-time data pipelines and dashboards for a City of Guelph municipal partnership (in collaboration with Flodraulic Systems), processing sensor data for winter road condition monitoring and salt truck route optimization. Designed and installed hardware prototypes and production units on field sites. Managing data collection infrastructure and stakeholder relationships across partner organizations in a government-funded research program.",
       "technologies": [
-        "Cisco",
-        "NetBox",
+        "Data Pipelines",
+        "Sensor Systems",
+        "Municipal Infrastructure",
+        "Hardware Deployment",
+        "Stakeholder Management"
+      ]
+    },
+    {
+      "title": "AI Researcher - Knowledge Systems & RAG Integrations",
+      "company": "University of Guelph Computing & Communications Services",
+      "period": "May 2025 - Aug 2025",
+      "description": "Built three RAG ingestion pipelines parsing unstructured institutional documents (SharePoint, Teams, FootPrints) into searchable knowledge bases, deployed on Azure Container Instances with Docker. Developed custom MCP servers integrating LLMs with university systems using Azure Functions and Azure OpenAI Service. Evaluated 5+ agent architectures using DSPy, LangChain, LangGraph, and Azure Cognitive Search. Implemented Azure AD-integrated access control with SpiceDB for department-specific AI assistants. Architected Azure Machine Learning pipelines using Claude Code, contributing to the university's enterprise AI strategy.",
+      "technologies": [
+        "RAG",
+        "Azure",
+        "Docker",
+        "MCP",
+        "LangChain",
+        "DSPy",
+        "SpiceDB",
+        "Enterprise AI"
+      ]
+    },
+    {
+      "title": "Network Infrastructure Co-op",
+      "company": "University of Guelph Computing & Communications Services",
+      "period": "May 2024 - Aug 2024",
+      "description": "Maintained campus-wide Wi-Fi systems and contributed to migrating the device database to a new platform, improving accessibility for 100+ employees.",
+      "technologies": [
         "Wi-Fi Systems",
-        "Network Troubleshooting",
+        "Network Infrastructure",
         "Database Migration"
       ]
     },
     {
-      "title": "Information Technology Administrator",
-      "company": "Zamand International Shipping and Transport Co.",
+      "title": "IT Admin/Developer",
+      "company": "Zamand Co.",
       "period": "Sep 2019 - Nov 2021",
-      "description": "Managed IT infrastructure and systems for international shipping operations. Administered network systems, maintained databases, and provided technical support for logistics operations across multiple locations.",
+      "description": "Set up company website, email hosting, and automated accounting workflows. Provided technical support and training across the organization.",
       "technologies": [
         "System Administration",
-        "Network Management",
-        "Database Administration",
+        "Web Development",
+        "Automation",
         "IT Support"
       ]
     }
   ],
   "side_projects": [
+    {
+      "name": "analog-gradients",
+      "description": "Autonomous chip design exploration platform. LLM agents orchestrate commercial EDA tools (Cadence Genus/Innovus, Synopsys PrimeTime, GPDK045 PDK). PyTorch model in, silicon PPA metrics out, ~11 minutes end to end. Produced a working 4-lane SIMD GPU (320 params, int8 quantized, 25.8 kGE, 118 MHz, 0.6 mW). Ran the lowRISC Ibex RISC-V core through 12 configurations matching published references within 1–15%. Extended with analog neuromorphic research: coupled oscillator optimization over 24–52D parameter spaces using CMA-ES with 2,000+ Spectre simulations.",
+      "logo": "/assets/logo.png",
+      "url": "https://github.com/captaindpt/torch2rtl",
+      "technologies": [
+        "PyTorch",
+        "LLM Agents",
+        "Cadence Genus/Innovus",
+        "Synopsys PrimeTime",
+        "GPDK045",
+        "CMA-ES",
+        "Spectre"
+      ],
+      "date": "2025-12-01",
+      "tier": "flagship",
+      "status": "active"
+    },
+    {
+      "name": "p1p-observer",
+      "description": "Reverse-engineered Danfoss's proprietary P1P binary file format with zero existing documentation. Parses 85+ binary record types, reconstructs page hierarchy, wire connectivity, and block naming across projects with 1,200+ pages and 3,700+ blocks. Turns opaque industrial control data into natural-language-searchable documentation.",
+      "logo": "/assets/logo.png",
+      "url": "#",
+      "technologies": [
+        "Python",
+        "Binary Reverse Engineering",
+        "NLP",
+        "Danfoss",
+        "Knowledge Systems"
+      ],
+      "date": "2026-01-15",
+      "tier": "flagship",
+      "status": "active"
+    },
     {
       "name": "YouTube Semantic Search (yt-aperture)",
       "description": "Python tool for extracting YouTube subtitles and performing semantic search over video content using sentence transformer models. Features intelligent chunking, embedding cache, and AI-optimized workflows for Claude Code integration.",
@@ -203,7 +253,7 @@
     },
     {
       "name": "Apple MCP (OSS Contribution)",
-      "description": "Open source contribution to Apple-native tools for Model Context Protocol. Implemented comprehensive email functionality including multi-recipient support, attachments, scheduling, and search capabilities. Project has 2k+ GitHub stars.",
+      "description": "Open source contribution to Apple-native tools for Model Context Protocol. Implemented comprehensive email functionality including multi-recipient support, attachments, scheduling, and search capabilities. Project has 3,000+ GitHub stars.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/supermemoryai/apple-mcp",
       "technologies": [
@@ -267,6 +317,11 @@
     }
   ],
   "everything_else": [
+    {
+      "description": "Pitched analog-gradients at the Akatos Symposium Showcase 2026 — presenting the autonomous chip design exploration platform to an international maker collective audience.",
+      "period": "2026",
+      "date": "2026-03-01"
+    },
     {
       "description": "Volunteered at the <a href=\"https://uwaterloo.ca/engineering/news/student-collective-brings-thousands-makers-together\" target=\"_blank\" rel=\"noopener noreferrer\">Socratica Symposium 2025</a> in Waterloo, helping coordinate and manage an international maker collective event that brought together over 2,500 students from multiple disciplines to build, innovate, and collaborate on projects spanning art, engineering, business, and design.",
       "period": "March 2025",

@@ -1473,6 +1473,92 @@ a:hover {
     transition: all 0.2s ease;
 }
 
+/* Status Tags */
+.status-tag {
+    display: inline-block;
+    font-family: 'AlmaMono', 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+}
+
+.status-active {
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.status-shipped {
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.status-ongoing {
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+/* Flagship Project Cards */
+.flagship-card {
+    border-color: var(--color-text-primary);
+    border-width: 2px;
+}
+
+/* Homepage Selected Work Sections */
+.selected-work-flagship p strong {
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-large);
+}
+
+.selected-work-shipped p strong {
+    font-family: var(--font-family-nav);
+}
+
+/* Archive Details/Summary */
+.archive-details {
+    margin-top: var(--spacing-sm);
+}
+
+.archive-details summary {
+    cursor: pointer;
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    padding: 0.5rem 0;
+    list-style: none;
+    transition: color 0.2s ease;
+}
+
+.archive-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.archive-details summary::before {
+    content: "> ";
+    font-family: 'AlmaMono', monospace;
+}
+
+.archive-details[open] summary::before {
+    content: "v ";
+}
+
+.archive-details summary:hover {
+    color: var(--color-text-primary);
+}
+
+.archive-details ul {
+    margin-top: 0.5rem;
+}
+
+.archive-details li {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
 /* Mobile Responsive Work Section */
 @media (max-width: 900px) {
     .work-container {
