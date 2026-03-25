@@ -1007,14 +1007,18 @@ html.dark-mode .site-logo:hover {
 
 /* Footer */
 .site-footer {
-    margin-left: var(--layout-sidebar-width);
-    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
     text-align: center;
     border-top: 1px solid var(--color-border);
     background: var(--color-background-primary);
     color: var(--color-text-secondary);
     font-family: var(--font-family-light);
     font-size: 14px;
+    z-index: 10;
 }
 
 /* Static ASCII Art */
@@ -1593,8 +1597,7 @@ a:hover {
     }
     
     .site-footer {
-        margin-left: 0;
-        padding: 1rem;
+        padding: 0.75rem 1rem;
     }
     
     /* Ensure full width on mobile */

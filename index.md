@@ -77,8 +77,6 @@ contributed to agent framework and UI in [Zed](https://github.com/zed-industries
 
 ## get in touch
 
-i operate through [calibur labs](mailto:mani@caliburlabs.com).
-
 you can reach me at [mani@caliburlabs.com](mailto:mani@caliburlabs.com).
 
 <div class="social-links">
