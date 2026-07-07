@@ -6,7 +6,7 @@ permalink: /my-work/
 
 # work
 
-a journey from IT administration to autonomous chip design. if you want a PDF copy of my resume, you can <a href="https://drive.google.com/file/d/1tFymABAQl-0r06U2AT83Jpexy8WlVKfI/view?usp=drive_link" target="_blank" rel="noopener noreferrer">get it here</a>.
+a journey from IT administration to autonomous chip design. if you want a PDF copy of my resume, you can <a href="/assets/Mani-Rash-Ahmadi-Resume.pdf" target="_blank" rel="noopener noreferrer">get it here</a>.
 
 <section class="section">
   <p class="label"><span class="idx">01</span>Experience</p>
