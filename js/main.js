@@ -8,6 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ASCII animation in the hero — a painting, rendered in characters
+  var pane = document.querySelector('.ascii-pane');
+  if (pane) {
+    fetch(pane.dataset.src || '/assets/ascii-animation.json')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var pre = pane.querySelector('pre');
+        var frames = d.frames;
+        if (!pre || !frames || !frames.length) return;
+        pre.textContent = frames[0];
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var i = 0;
+        setInterval(function () {
+          if (document.hidden) return;
+          i = (i + 1) % frames.length;
+          pre.textContent = frames[i];
+        }, 1000 / 14);
+      })
+      .catch(function () {});
+  }
+
   // Job cycler on the work page
   var cycler = document.getElementById('job-cycler');
   if (cycler) {

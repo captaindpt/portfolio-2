@@ -5,12 +5,16 @@
 </head>
 <body>
     <div class="page">
-        <header class="site-head">
-            <a href="/" class="wordmark"><span class="tilde">~/</span>mani-rash-ahmadi</a>
+        <header class="site-head" id="top">
+            <a href="/" class="wordmark">
+                <img src="/assets/logo.png" alt="" class="site-logo">
+                <span><span class="tilde">::&nbsp;~/</span>mani-rash-ahmadi</span>
+            </a>
             <nav class="site-nav">
                 {% for item in site.navigation %}
                     <a href="{{ item.url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.title | downcase }}</a>
                 {% endfor %}
+                <a href="https://drive.google.com/file/d/1tFymABAQl-0r06U2AT83Jpexy8WlVKfI/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="resume-link">resume ↗</a>
                 <button class="theme-toggle" aria-label="Toggle dark mode">◐</button>
             </nav>
         </header>

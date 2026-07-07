@@ -4,10 +4,45 @@ title: Home
 ---
 
 <section class="hero">
-  <p class="label"><span class="idx">::</span>Guelph, Ontario — engineer, builder</p>
-  <h1>i make things. paintings, beats, robots — lately, <em>the tools that make chips</em>.</h1>
+  <p class="label"><span class="idx">::</span>engineer &amp; builder — Guelph, Ontario</p>
+  <h1>mani rash ahmadi</h1>
+  <p class="statement">i make things. paintings, beats, robots — lately, <em>the tools that make chips</em>.<span class="cursor" aria-hidden="true"></span></p>
   <p class="subline">my goal is technology that lets anyone make anything. right now that means closing the loop between machine learning and silicon.</p>
+  <div class="currently">
+    <span class="label"><span class="idx">::</span>Currently</span>
+    <ul>
+      <li><strong>first principles research</strong> — consulting swe</li>
+      <li><strong>flodraulic systems</strong> — systems engineer</li>
+      <li><strong>uog gharabaghi group</strong> — research engineer</li>
+    </ul>
+  </div>
 </section>
+
+<figure class="plate">
+  <div class="ascii-pane" data-src="/assets/ascii-animation.json" aria-hidden="true">
+    <pre class="ascii"></pre>
+  </div>
+  <figcaption><span class="idx">fig. 01</span> — ascii animation · 80×40 chars · 262 frames</figcaption>
+</figure>
+
+<div class="stats">
+  <div class="stat">
+    <span class="num">~11<sup>min</sup></span>
+    <span class="cap">pytorch model to silicon PPA metrics, end to end</span>
+  </div>
+  <div class="stat">
+    <span class="num">85<sup>+</sup></span>
+    <span class="cap">binary record types reverse-engineered, zero docs</span>
+  </div>
+  <div class="stat">
+    <span class="num">2,000<sup>+</sup></span>
+    <span class="cap">spectre simulations orchestrated by CMA-ES</span>
+  </div>
+  <div class="stat">
+    <span class="num">1–15<sup>%</sup></span>
+    <span class="cap">of published ibex PPA refs across 12 configs</span>
+  </div>
+</div>
 
 <section class="section">
   <p class="label"><span class="idx">01</span>Now</p>
@@ -27,13 +62,15 @@ title: Home
       <span class="what">
         <h3>analog-gradients<span class="flag">flagship</span></h3>
         <p>autonomous chip design exploration. produced a working 4-lane SIMD GPU and ran the lowRISC Ibex core through 12 configurations within 1–15% of published references.</p>
+        <span class="metric">4-lane SIMD GPU · 25.8 kGE · 118 MHz · 0.6 mW — from a pytorch model</span>
       </span>
     </a>
     <a class="index-row" href="/my-work/">
       <span class="when">2026</span>
       <span class="what">
         <h3>p1p-observer</h3>
-        <p>reverse-engineered a proprietary binary format with zero documentation — 85+ record types, 1,200+ pages of industrial control data made searchable in natural language.</p>
+        <p>reverse-engineered a proprietary binary format with zero documentation — industrial control data made searchable in natural language.</p>
+        <span class="metric">85+ record types · 1,200+ pages · 3,700+ blocks reconstructed</span>
       </span>
     </a>
     <a class="index-row" href="/my-work/">

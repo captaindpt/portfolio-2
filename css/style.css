@@ -76,6 +76,7 @@
   --accent: #cc4514;
   --accent-soft: rgba(204, 69, 20, 0.09);
   --code-bg: #ece7db;
+  --grid-line: rgba(28, 25, 20, 0.04);
 
   --serif: 'Martina', 'Iowan Old Style', Georgia, serif;
   --mono: 'TX-02', ui-monospace, 'SF Mono', Menlo, monospace;
@@ -95,6 +96,7 @@ html.dark {
   --accent: #ff6a35;
   --accent-soft: rgba(255, 106, 53, 0.12);
   --code-bg: #211e17;
+  --grid-line: rgba(233, 228, 216, 0.035);
 }
 
 /* ---------- Base ---------- */
@@ -110,6 +112,11 @@ html {
 body {
   margin: 0;
   background: var(--paper);
+  /* engineering graph paper, barely there */
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
   color: var(--ink);
   font-family: var(--serif);
   font-weight: 400;
@@ -165,6 +172,9 @@ main {
 }
 
 .site-head .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   font-family: var(--mono);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -176,6 +186,34 @@ main {
 
 .site-head .wordmark .tilde {
   color: var(--accent);
+}
+
+.site-logo {
+  width: 30px;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.wordmark:hover .site-logo {
+  transform: rotate(180deg);
+}
+
+html.dark .site-logo {
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+.site-nav .resume-link {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  padding: 0.3rem 0.55rem;
+}
+
+.site-nav .resume-link:hover {
+  background: var(--accent);
+  color: var(--paper);
 }
 
 .site-nav {
@@ -191,6 +229,7 @@ main {
   letter-spacing: 0.06em;
   color: var(--muted);
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.15s ease;
 }
 
@@ -227,33 +266,182 @@ main {
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: 5.5rem 0 4.5rem;
+  padding: 4.5rem 0 3rem;
 }
 
 .hero .label {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.6rem;
 }
 
 .hero h1 {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(2.1rem, 5.4vw, 3.15rem);
-  line-height: 1.18;
-  letter-spacing: -0.015em;
-  margin: 0 0 1.5rem;
+  font-size: clamp(2.5rem, 6.5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.4rem;
 }
 
-.hero h1 em {
+.hero .statement {
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.8vw, 1.55rem);
+  line-height: 1.4;
+  margin: 0 0 1.1rem;
+}
+
+.hero .statement em {
   font-style: italic;
   color: var(--accent);
 }
 
+.hero .cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  background: var(--accent);
+  vertical-align: -0.12em;
+  margin-left: 0.12em;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 .hero .subline {
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   line-height: 1.6;
   color: var(--ink-soft);
-  max-width: 34rem;
+  max-width: 32rem;
   margin: 0;
+}
+
+/* ascii plate — a figure, like in a paper */
+
+.plate {
+  padding: 1.5rem 0 2.75rem;
+}
+
+.plate .ascii-pane {
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.plate pre.ascii {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: clamp(4.5px, 1.35vw, 8.5px);
+  line-height: 1.08;
+  letter-spacing: 0;
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+.plate figcaption {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 480;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.plate figcaption .idx {
+  color: var(--accent);
+}
+
+/* currently strip */
+
+.currently {
+  margin-top: 2.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  gap: 1.1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.currently .label {
+  flex-shrink: 0;
+}
+
+.currently ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+}
+
+.currently li {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 480;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.currently li strong {
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.currently li::before {
+  content: '▸ ';
+  color: var(--accent);
+}
+
+/* ---------- Stats strip ---------- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.stats .stat {
+  padding: 1.5rem 1.25rem 1.4rem 0;
+}
+
+.stats .stat + .stat {
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--hairline);
+}
+
+.stats .num {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stats .num sup {
+  font-size: 0.55em;
+  color: var(--accent);
+}
+
+.stats .cap {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 480;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 /* ---------- Sections ---------- */
@@ -349,6 +537,20 @@ a.index-row:hover .what h3 {
 
 a.index-row:hover .when {
   color: var(--accent);
+}
+
+.index-row .metric {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.index-row .metric::before {
+  content: '↳ ';
 }
 
 .index-row .flag {
@@ -733,7 +935,29 @@ article .post-date {
   }
 
   .hero {
-    padding: 3.5rem 0 3rem;
+    padding: 3rem 0 2.25rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats .stat {
+    padding: 1.1rem 1rem 1rem 0;
+  }
+
+  .stats .stat + .stat {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .stats .stat:nth-child(even) {
+    padding-left: 1rem;
+    border-left: 1px solid var(--hairline);
+  }
+
+  .stats .stat:nth-child(n + 3) {
+    border-top: 1px solid var(--hairline);
   }
 
   .index-row,
