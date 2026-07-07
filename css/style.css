@@ -62,6 +62,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Perfectly Nineties';
+  src: url('../assets/fonts/new-fonts/PerfectlyNineties-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Perfectly Nineties';
+  src: url('../assets/fonts/new-fonts/PerfectlyNineties-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ---------- Tokens ---------- */
 
@@ -274,11 +288,11 @@ html.dark .site-logo {
 }
 
 .hero h1 {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2.5rem, 6.5vw, 3.8rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: 'Perfectly Nineties', var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6.5vw, 3.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
   margin: 0 0 1.4rem;
 }
 
