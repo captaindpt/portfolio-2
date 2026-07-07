@@ -1,0 +1,34 @@
+---
+layout: layout.liquid
+title: Posts
+permalink: /posts/
+---
+
+<h1>posts</h1>
+
+<p>notes from the build — some technical, some philosophical, most somewhere in between.</p>
+
+<section class="section">
+  <p class="label"><span class="idx">::</span>Index</p>
+  {% if collections.posts.size > 0 %}
+  <div class="index-list">
+    {% for post in collections.posts %}
+    <a class="index-row" href="{{ post.url }}">
+      <span class="when">{{ post.data.date | date: "%b %d '%y" | downcase }}</span>
+      <span class="what">
+        <h3>{{ post.data.title }}{% if post.data.excerpt %} <span class="sub">{{ post.data.excerpt }}</span>{% endif %}</h3>
+        {% if post.data.tags.size > 0 %}
+        <span class="post-tags">
+          {%- for tag in post.data.tags -%}
+          <span class="tag">{{ tag }}</span>
+          {%- endfor -%}
+        </span>
+        {% endif %}
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>no posts yet. check back soon!</p>
+  {% endif %}
+</section>

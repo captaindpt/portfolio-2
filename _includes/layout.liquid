@@ -21,6 +21,9 @@
 
         <main>
             <article id="content-area">
+                {% if page.url contains "/posts/" and page.url != "/posts/" %}
+                <p class="post-date"><span class="idx">::</span> {{ page.date | date: "%B %-d, %Y" | downcase }}</p>
+                {% endif %}
                 {{ content }}
             </article>
         </main>

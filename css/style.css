@@ -553,6 +553,33 @@ a.index-row:hover .when {
   content: '↳ ';
 }
 
+/* post rows: title runs into an italic subtitle — "Real Value comes with a half life" */
+
+.index-row .what h3 .sub {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+a.index-row:hover .what h3 .sub {
+  color: var(--accent);
+}
+
+.index-row .what .post-tags {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 480;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.index-row .what .post-tags .tag {
+  margin-right: 0.9rem;
+}
+
 .index-row .flag {
   font-family: var(--mono);
   font-size: 0.6rem;
@@ -836,6 +863,15 @@ article .post-date {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+  margin: 4rem 0 0;
+}
+
+article .post-date .idx {
+  color: var(--accent);
+}
+
+article .post-date + h1 {
+  margin-top: 1rem;
 }
 
 /* ---------- Contact block ---------- */

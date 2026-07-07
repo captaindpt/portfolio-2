@@ -106,8 +106,7 @@ title: Home
     <a class="index-row" href="{{ post.url }}">
       <span class="when">{{ post.data.date | date: "%b %Y" | downcase }}</span>
       <span class="what">
-        <h3>{{ post.data.title }}</h3>
-        {% if post.data.excerpt %}<p>{{ post.data.excerpt }}</p>{% endif %}
+        <h3>{{ post.data.title }}{% if post.data.excerpt %} <span class="sub">{{ post.data.excerpt }}</span>{% endif %}</h3>
       </span>
     </a>
     {% endfor %}
