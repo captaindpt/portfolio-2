@@ -4,14 +4,16 @@ title: Posts
 permalink: /posts/
 ---
 
-# Posts
+# posts
+
+notes from the build — some technical, some philosophical, most somewhere in between.
 
 {% if collections.posts.size > 0 %}
 {% for post in collections.posts %}
 <article class="post-preview">
   <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
   {% if post.data.excerpt %}
-  <h3 class="post-subtitle">{{ post.data.excerpt }}</h3>
+  <p class="post-subtitle">{{ post.data.excerpt }}</p>
   {% endif %}
   <div class="post-meta">
     <time datetime="{{ post.data.date | date: '%Y-%m-%d' }}">{{ post.data.date | dateFormat }}</time>
@@ -23,9 +25,8 @@ permalink: /posts/
     </span>
     {% endif %}
   </div>
-  <a href="{{ post.url }}" class="read-more">Read more →</a>
 </article>
 {% endfor %}
 {% else %}
-<p>No posts yet. Check back soon!</p>
+<p>no posts yet. check back soon!</p>
 {% endif %}

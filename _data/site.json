@@ -1,6 +1,6 @@
 {
-  "title": "My Portfolio",
-  "description": "hello there!",
+  "title": "Mani Rash Ahmadi",
+  "description": "engineer, builder — closing the loop between machine learning and silicon.",
   "author": "Mani Rash Ahmadi",
   "url": "https://yoursite.com",
   "language": "en",
@@ -246,7 +246,14 @@
       "description": "RFID-enhanced physical item tracker combining Arduino hardware with PWA frontend and backend API. Features Wi-Fi provisioning, real-time tag scanning, item presence tracking, and web-based item management interface.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/theboxproject",
-      "technologies": ["Arduino", "RFID", "PWA", "Backend API", "Wi-Fi", "IoT"],
+      "technologies": [
+        "Arduino",
+        "RFID",
+        "PWA",
+        "Backend API",
+        "Wi-Fi",
+        "IoT"
+      ],
       "date": "2025-04-01"
     },
     {
@@ -294,7 +301,12 @@
       "description": "Educational neural network implementation from scratch in Python for MNIST handwritten digit classification. Built without high-level ML frameworks to demonstrate fundamentals of neural architecture, training, and evaluation.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/mnist-from-scratch",
-      "technologies": ["Python", "NumPy", "Matplotlib", "Neural Networks"],
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Matplotlib",
+        "Neural Networks"
+      ],
       "date": "2024-03-19"
     },
     {
@@ -302,7 +314,12 @@
       "description": "React web app to test typing speed with real-time accuracy tracking, visual feedback for keystrokes, and random sentence generation from dictionary.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/typing-game",
-      "technologies": ["React", "JavaScript", "CSS", "HTML"],
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
       "date": "2024-03-07"
     },
     {
@@ -310,7 +327,12 @@
       "description": "Movie archive assistant built with Python and Qt frontend. Uses IMDb API to automatically organize movie folders and manage your personal film collection with metadata.",
       "logo": "/assets/logo.png",
       "url": "https://github.com/captaindpt/CineFile",
-      "technologies": ["Python", "Qt", "IMDb API", "Raspberry Pi"],
+      "technologies": [
+        "Python",
+        "Qt",
+        "IMDb API",
+        "Raspberry Pi"
+      ],
       "date": "2020-10-03"
     }
   ],
